@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+        <class name="testcases.Register_NonLoyalUser"/>
+        <class name="testcases.Register_LoyalUser"/>
+        <class name="testcases.RegUserRegularOrderPayAtRestaurant"/>
+        <class name="testcases.RegUserPartyOrderPayAtRestaurant"/>
+        <class name="testcases.RegUserRegularAndPartyOrderPayAtRestaurant"/>
+        <class name="testcases.RegUserRegularOrderPayOnline"/>
+        <class name="testcases.RegUserPartyOrderPayOnline"/>
+        <class name="testcases.RegUserRegularAndPartyOrderPayOnline"/>
+        <class name="testcases.GuestUserRegularOrderPayAtRestaurant"/>
+        <class name="testcases.GuestUserPartyOrderPayAtRestaurant"/>
+        <class name="testcases.GuestUserRegularPartyOrderPayAtRestaurant"/>
+        <class name="testcases.GuestUserRegularOrderPayOnline"/>
+        <class name="testcases.GuestUserPartyOrderPayOnline"/>
+        <class name="testcases.GuestUserRegularPartyOrderPayOnline"/>
+        <class name="testcases.ForgotPwd"/>
+        <class name="testcases.SocialMedia"/>
+        <class name="testcases.FooterLinks"/>
+        <class name="testcases.ValidateAddFavorite"/>
+        <class name="testcases.RegUserAddGiftCard"/>
+        <class name="testcases.GuestUserAddGiftCard"/>
+        <class name="testcases.RegUserMyPeiWeiRewards"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
