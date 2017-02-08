@@ -26,15 +26,14 @@ public void login() throws InterruptedException {
 	.clickLogo()
 	.clickInvestors()
 	.switchback()
+	.clickGlobalInvestments()
+	.switchback()
 	.clickMedia()
 	.clickLogo()
 	.clickPrivacy()
 	.clickLogo()
 	.clickTerms()
-	.clickLogo();
-	System.out.println("success");
-	
-    
+	.clickLogo();    
 	}
 @BeforeClass
 public void beforeClass() {

@@ -92,83 +92,89 @@ import utils.Reporter;
 		public FB clickFacebook() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Facebook.Xpath"));
 			switchToLastWindow();
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new FB();
 		}
 		
 		public Twitter clickTwitter() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.twitter.Xpath"));
 			switchToLastWindow();
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new Twitter();
 		}
 		public Pinterest clickPinterest() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Pinterest.Xpath"));
 			switchToLastWindow();
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new Pinterest();
 		}
 		public Googleplus clickGoogleplus() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Googleplus.Xpath"));
 			switchToLastWindow();
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new Googleplus();
 		}
 		public Instagram clickInstagram() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Instagram.Xpath"));
 			switchToLastWindow();
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new Instagram();
 		}
 		
 		public Contactus clickContactus() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Contactus.Xpath"));
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new Contactus();
 		}
 		public Sitemap clickSitemap() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Sitemap.Xpath"));
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new Sitemap();
 		}
 		public AllLoc clickAllloc() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Allloc.Xpath"));
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new AllLoc();
 		}
 		public Careers clickCareers() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Careers.Xpath"));
 			switchToLastWindow();
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new Careers();
 		}
 		public PeiweiLocal clickPeiweilocal() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Peiweilocal.Xpath"));
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new PeiweiLocal();
 		}
 		public Investors clickInvestors() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Investors.Xpath"));
 			switchToLastWindow();
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new Investors();
 		}
 		public Media clickMedia() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Media.Xpath"));
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new Media();
 		}
 		public PrivacyPolicy clickPrivacy() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Privacy.Xpath"));
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new PrivacyPolicy();
 		}
 		public Terms clickTerms() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Terms.Xpath"));
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new Terms();
 		}
 	
+		public GlobalInvestments clickGlobalInvestments() throws InterruptedException {
+			clickByXpath(prop.getProperty("Home.GlobalInvestments.Xpath"));
+			//Thread.sleep(5000);
+			return new GlobalInvestments();
+		}
+		
 		public GiftCard clickGiftcard(){
 			clickByXpath(prop.getProperty("AccountOverview.Giftcards.Xpath"));
 			return new GiftCard();

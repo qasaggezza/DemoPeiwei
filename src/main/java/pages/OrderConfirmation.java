@@ -35,7 +35,7 @@ public class OrderConfirmation extends PeiweiWrappers {
 		 driver.manage().window().maximize();
 		 switchToLastWindow();*/
 		driver.navigate().to("https://www.gmail.com");
-		 Thread.sleep(2000);
+		// Thread.sleep(2000);
 		 return new Gmail();
 		}
 	

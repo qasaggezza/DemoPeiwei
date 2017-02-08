@@ -18,7 +18,7 @@ public void login(String emailadd,String pwd,String date,String time,String Emai
 	.clickSubmit()
 	.clickOrderFavourite()
 	.clickCheckOutFavourite()
-	.clickQuinoaAddToFavorite()
+	//.clickQuinoaAddToFavorite()
 	.clickCheckOut()
 	.clickCalendar(date)
 	.selectTime(time)

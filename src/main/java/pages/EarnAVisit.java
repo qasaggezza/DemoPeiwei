@@ -10,7 +10,7 @@ public class EarnAVisit extends PeiweiWrappers {
 	
 	
 	public MyPeiWeiRewards clickMyWeiRewards1() throws InterruptedException {
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		clickByXpath(prop.getProperty("AccountOverview.MyWeiRewards.Xpath"));
 		return new MyPeiWeiRewards();
 	}

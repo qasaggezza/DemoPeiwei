@@ -70,7 +70,7 @@ public class CheckOut extends PeiweiWrappers {
 	
 	public OrderConfirmation clickPlaceOrder() throws InterruptedException {
 		clickByXpath(prop.getProperty("CheckOut.PlaceOrder.Xpath"));
-		Thread.sleep(25000);
+		//Thread.sleep(25000);
 		return new OrderConfirmation();	
 		
 	}

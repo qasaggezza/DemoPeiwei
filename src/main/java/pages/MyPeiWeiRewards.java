@@ -10,20 +10,20 @@ public class MyPeiWeiRewards extends PeiweiWrappers {
 	
 	
 	public MyPeiWeiRewards verifyCard() throws InterruptedException {
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		clickByXpath(prop.getProperty("MyWeiRewards.Card.Xpath"));
 		return this;
 	}
 
 	public EarnAVisit clickEarnAVisit() throws InterruptedException  {
 		clickByXpath(prop.getProperty("MyWeiRewards.EarnAVisit.Xpath"));
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		return new EarnAVisit();
 		
 		}
 	public FAQ clickFAQ() throws InterruptedException  {
 		clickByXpath(prop.getProperty("MyWeiRewards.FAQ.Xpath"));
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		return new FAQ();
 		
 		}

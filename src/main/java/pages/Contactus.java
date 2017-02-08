@@ -9,8 +9,9 @@ public class Contactus extends PeiweiWrappers {
 	}
 	
 	public HomePage clickLogo() throws InterruptedException {
+		Thread.sleep(1000);
 		clickByXpath(prop.getProperty("Home.Logo.Xpath"));
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		return new HomePage();
 	}
 }
