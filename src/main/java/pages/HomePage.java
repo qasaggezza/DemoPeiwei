@@ -50,25 +50,25 @@ import utils.Reporter;
 		
 		public AccountOverview clickSubmit() throws InterruptedException {
 			clickByXpath(prop.getProperty("Login.submit.Xpath"));
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			return new AccountOverview();
 		}
 
 		public HomePage enterChangeLoc(String loc) throws InterruptedException {
 			enterByXpath(prop.getProperty("Home.Location.Xpath"), loc);
-			Thread.sleep(2000);
+			//Thread.sleep(2000);
 			return this;
 		}
 		
 		public HomePage clickSearch() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.Search.Xpath"));
-			Thread.sleep(3000);
+			//Thread.sleep(3000);
 			return this;
 		}
 		
 		public HomePage clickP2labs() throws InterruptedException {
 			clickByXpath(prop.getProperty("Home.P2labs.Xpath"));
-			Thread.sleep(2000);
+			//Thread.sleep(2000);
 			return this;
 		}
 		

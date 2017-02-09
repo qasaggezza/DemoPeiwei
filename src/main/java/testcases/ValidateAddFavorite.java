@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class ValidateAddFavorite extends PeiweiWrappers{
 	@Test(dataProvider="fetchData")
-public void login(String emailadd,String pwd,String date,String time,String Emailaddr, String Password,String verifytext) throws InterruptedException {
+public void login(String emailadd,String pwd,String date,String time,String dat,String Emailaddr, String Password,String verifytext) throws InterruptedException {
 
 	new HomePage()
 	.clickLogin()
@@ -23,6 +23,9 @@ public void login(String emailadd,String pwd,String date,String time,String Emai
 	.clickCalendar(date)
 	.selectTime(time)
 	.clickPlaceOrder()
+	.verifydate(dat)
+	//.verifyMonth(mon)
+	.verifytime(time)
 	.InvokeGmail1()
     .enterEmailaddress(Emailaddr)
     .enterNext()

@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 
 public class RegUserRegularOrderPayAtRestaurant extends PeiweiWrappers{
 @Test(dataProvider="fetchData")
-public void login(String emailadd,String pwd,String num,String quantity,String date,String time,String month,String Emailaddr,String Password,String txt) throws InterruptedException {
+public void login(String emailadd,String pwd,String num,String rice, String qua,String date,String time,String month,String Emailaddr,String Password,String txt) throws InterruptedException {
 
 	new HomePage()
 	.clickLogin()
@@ -20,23 +20,23 @@ public void login(String emailadd,String pwd,String num,String quantity,String d
 	.clickSubmit()
 	.clickMenuAndOrder()
 	.clickRiceAndNoodle()
-	.clickMangolian()
+	.clickSesame()
 	.enterQuantity(num)
 	.clickSize1()
 	.clickIngredient()
 	.clickServedWith1()
 	.clickAddToOrder()
 	.clickCheckOut()
-	.enterSnicker(quantity)
-    .clickSnickerAddToOrder()
+	.selectRice(rice)
+	.enterQuan(qua)
+    .clickRiceAddToOrder()
     .clickCheckOut()
     .clickCalendar(date)
     //.clickNext()
     //.clickDate()
     .selectTime(time)
     .clickPlaceOrder()
-    .verifyMonth(month)
-    
+    .verifydate(month)
     .verifytime(time)
     .InvokeGmail1()
     .enterEmailaddress(Emailaddr)

@@ -57,7 +57,7 @@ public class PaymentGateway extends PeiweiWrappers {
 	
 	public OrderConfirmation clickPayWithCard() throws InterruptedException {
 		clickByXpath(prop.getProperty("PaymentGateway.PayWithCard.Xpath"));
-		Thread.sleep(20000);
+		//Thread.sleep(20000);
 		return new OrderConfirmation();	
 		
 	}

@@ -129,8 +129,9 @@ public class MenuAndOrd extends PeiweiWrappers {
 		
 	}
 	
-	public MenuAndOrd clickAddToOrder() {
+	public MenuAndOrd clickAddToOrder() throws InterruptedException {
 		clickByXpath(prop.getProperty("MenuAndOrder.AddtoOrder.XPath"));
+	    Thread.sleep(1000);
 		return this;	
 		
 	}

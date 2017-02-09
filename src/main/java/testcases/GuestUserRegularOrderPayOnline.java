@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 
 public class GuestUserRegularOrderPayOnline extends PeiweiWrappers{
 @Test(dataProvider="fetchData")
-public void login(String loc,String num,String quantity,String date,String time,String fname, String lname, String Email,String Phone, String Zip,String cname, String cnum,String Exdate, String cvv,String month, String Emailaddr, String Password,String txt) throws InterruptedException {
+public void login(String loc,String num,String rice, String quantity,String date,String time,String fname, String lname, String Email,String Phone, String Zip,String cname, String cnum,String Exdate, String cvv,String month, String Emailaddr, String Password,String txt) throws InterruptedException {
 
 	new HomePage()
 	.enterChangeLoc(loc)
@@ -19,15 +19,16 @@ public void login(String loc,String num,String quantity,String date,String time,
 	.clickP2labs()
 	.clickMenuAndOrd()
 	.clickRiceAndNoodle()
-	.clickMangolian()
+	.clickSesame()
 	.enterQuantity(num)
 	.clickSize1()
 	.clickIngredient()
 	.clickServedWith1()
 	.clickAddToOrder()
 	.clickCheckOut()
-	.enterWhite(quantity)
-	.clickWRiceAddToOrder()
+	.selectRice(rice)
+	.enterQuan(quantity)
+	.clickRiceAddToOrder()
     .clickCheckOut()
     .clickCalendar(date)
    // .clickNext()
@@ -49,7 +50,7 @@ public void login(String loc,String num,String quantity,String date,String time,
     //.selectState(state)
     //.enterZipCode(Zip1)
 */    .clickPayWithCard()
-.verifyMonth(month)
+.verifydate(month)
 .verifytime(time)
 .InvokeGmail1()
 .enterEmailaddress(Emailaddr)

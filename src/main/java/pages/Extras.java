@@ -9,13 +9,25 @@ public class Extras extends PeiweiWrappers {
 			//Reporter.reportStep("This is not Home Page", "FAIL");
 	}
 	
-	public Extras enterWhite(String data) {
-		enterByXpath(prop.getProperty("Extras.WRiceQty.XPath"), data);
+	public Extras enterLettuce(String data) {
+		enterByXpath(prop.getProperty("Extras.Lettuce.XPath"), data);
 		return this;	
 		
 	}
-	public Extras clickWRiceAddToOrder() {
-		clickByXpath(prop.getProperty("Extras.WRice.XPath"));
+	public Extras clickLettuceAddToOrder() {
+		clickByXpath(prop.getProperty("Extras.LettuceAddToOrder.XPath"));
+		return this;	
+		
+	}
+	
+	public Extras selectRice(String data) {
+		selectByXpath(prop.getProperty("Extras.Rice.XPath"), data);
+		return this;	
+		
+	}
+	
+	public Extras enterQuan(String data) {
+		enterByXpath(prop.getProperty("Extras.riceQuantity.XPath"), data);
 		return this;	
 		
 	}
@@ -38,8 +50,8 @@ public class Extras extends PeiweiWrappers {
 		
 	}
 	
-	public Extras clickSnickerAddToOrder() {
-		clickByXpath(prop.getProperty("Extras.SnickerdoodleAddToOrder.XPath"));
+	public Extras clickRiceAddToOrder() {
+		clickByXpath(prop.getProperty("Extras.riceAddToOrder.XPath"));
 		return this;	
 		
 	}
