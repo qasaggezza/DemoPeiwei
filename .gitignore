@@ -1,1 +1,11 @@
-/target/
+.git
+.settings
+lib
+reports
+target
+test-output
+.project
+.classpath
+.gitignore
+.bat
+.jar
