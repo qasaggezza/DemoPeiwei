@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="20" failed="1" total="21" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="46571" started-at="2017-02-10T06:02:52Z" finished-at="2017-02-10T06:03:39Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="46571" started-at="2017-02-10T06:02:52Z" finished-at="2017-02-10T06:03:39Z">
+      <class name="testcases.RegUserAddGiftCard">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.RegUserAddGiftCard@5702b3b1]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.RegUserAddGiftCard@5702b3b1]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.RegUserAddGiftCard -->
+      <class name="testcases.GuestUserPartyOrderPayAtRestaurant">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.GuestUserPartyOrderPayAtRestaurant@cb644e]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.GuestUserPartyOrderPayAtRestaurant@cb644e]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.GuestUserPartyOrderPayAtRestaurant -->
+      <class name="testcases.GuestUserRegularOrderPayAtRestaurant">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.GuestUserRegularOrderPayAtRestaurant@5cb9f472]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.GuestUserRegularOrderPayAtRestaurant@5cb9f472]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.GuestUserRegularOrderPayAtRestaurant -->
+      <class name="testcases.GuestUserAddGiftCard">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.GuestUserAddGiftCard@6e06451e]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.GuestUserAddGiftCard@6e06451e]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.GuestUserAddGiftCard -->
+      <class name="testcases.Register_NonLoyalUser">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.Register_NonLoyalUser@4b952a2d]" name="beforeClass" is-config="true" duration-ms="1" started-at="2017-02-10T11:32:52Z" finished-at="2017-02-10T11:32:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.Register_NonLoyalUser@4b952a2d]" name="beforeMethod" is-config="true" duration-ms="10757" started-at="2017-02-10T11:32:53Z" finished-at="2017-02-10T11:33:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.Register_NonLoyalUser@4b952a2d]" name="login" duration-ms="29744" started-at="2017-02-10T11:33:03Z" data-provider="fetchData" finished-at="2017-02-10T11:33:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sudharsan.kg+381@saggezza.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sagezza123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Muthu]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[raman]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[5427392892]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[76543]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[sudharsan.kg@saggezza.com]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[sudharsan@27]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Welcome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[FAILED]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: FAILED
+	at utils.Reporter.reportStep(Reporter.java:38)
+	at wrappers.GenericWrappers.clickByXpath(GenericWrappers.java:333)
+	at pages.AccountOverview.clickLogout(AccountOverview.java:16)
+	at testcases.Register_NonLoyalUser.login(Register_NonLoyalUser.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.Register_NonLoyalUser@4b952a2d]" name="afterMethod" is-config="true" duration-ms="887" started-at="2017-02-10T11:33:33Z" finished-at="2017-02-10T11:33:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.Register_NonLoyalUser -->
+      <class name="testcases.RegUserRegularAndPartyOrderPayOnline">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.RegUserRegularAndPartyOrderPayOnline@3159c4b8]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.RegUserRegularAndPartyOrderPayOnline@3159c4b8]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.RegUserRegularAndPartyOrderPayOnline -->
+      <class name="testcases.GuestUserPartyOrderPayOnline">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.GuestUserPartyOrderPayOnline@6e1567f1]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.GuestUserPartyOrderPayOnline@6e1567f1]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.GuestUserPartyOrderPayOnline -->
+      <class name="testcases.RegUserRegularAndPartyOrderPayAtRestaurant">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.RegUserRegularAndPartyOrderPayAtRestaurant@1ed4004b]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.RegUserRegularAndPartyOrderPayAtRestaurant@1ed4004b]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.RegUserRegularAndPartyOrderPayAtRestaurant -->
+      <class name="testcases.RegUserPartyOrderPayAtRestaurant">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.RegUserPartyOrderPayAtRestaurant@13805618]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.RegUserPartyOrderPayAtRestaurant@13805618]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.RegUserPartyOrderPayAtRestaurant -->
+      <class name="testcases.RegUserRegularOrderPayAtRestaurant">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.RegUserRegularOrderPayAtRestaurant@56ef9176]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.RegUserRegularOrderPayAtRestaurant@56ef9176]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.RegUserRegularOrderPayAtRestaurant -->
+      <class name="testcases.FooterLinks">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.FooterLinks@59494225]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:testcases.FooterLinks@59494225]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="login()[pri:0, instance:testcases.FooterLinks@59494225]" name="login" duration-ms="1" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:testcases.FooterLinks@59494225]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.FooterLinks -->
+      <class name="testcases.GuestUserRegularPartyOrderPayOnline">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.GuestUserRegularPartyOrderPayOnline@5649fd9b]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.GuestUserRegularPartyOrderPayOnline@5649fd9b]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.GuestUserRegularPartyOrderPayOnline -->
+      <class name="testcases.RegUserMyPeiWeiRewards">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.RegUserMyPeiWeiRewards@69ea3742]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testcases.RegUserMyPeiWeiRewards@69ea3742]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.RegUserMyPeiWeiRewards -->
+      <class name="testcases.ValidateAddFavorite">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.ValidateAddFavorite@25bbe1b6]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.ValidateAddFavorite@25bbe1b6]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.ValidateAddFavorite -->
+      <class name="testcases.RegUserPartyOrderPayOnline">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.RegUserPartyOrderPayOnline@73ad2d6]" name="beforeSuite" is-config="true" duration-ms="176" started-at="2017-02-10T11:32:52Z" finished-at="2017-02-10T11:32:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.RegUserPartyOrderPayOnline@73ad2d6]" name="beforeTest" is-config="true" duration-ms="0" started-at="2017-02-10T11:32:52Z" finished-at="2017-02-10T11:32:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.RegUserPartyOrderPayOnline@73ad2d6]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.RegUserPartyOrderPayOnline@73ad2d6]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:testcases.RegUserPartyOrderPayOnline@73ad2d6]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="SKIP" signature="afterSuite()[pri:0, instance:testcases.RegUserPartyOrderPayOnline@73ad2d6]" name="afterSuite" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testcases.RegUserPartyOrderPayOnline -->
+      <class name="testcases.Register_LoyalUser">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.Register_LoyalUser@6adede5]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:34Z" finished-at="2017-02-10T11:33:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:testcases.Register_LoyalUser@6adede5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:34Z" finished-at="2017-02-10T11:33:34Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[FAILED]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: FAILED
+	at utils.Reporter.reportStep(Reporter.java:38)
+	at wrappers.GenericWrappers.invokeApp(GenericWrappers.java:97)
+	at wrappers.PeiweiWrappers.beforeMethod(PeiweiWrappers.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:601)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.Register_LoyalUser@6adede5]" name="login" duration-ms="1" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sudharsan.kg+382@saggezza.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sagezza123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Muthu]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[raman]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[5427392892]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[76543]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[June]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[sudharsan.kg@saggezza.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[sudharsan@27]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Welcome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:testcases.Register_LoyalUser@6adede5]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.Register_LoyalUser -->
+      <class name="testcases.RegUserRegularOrderPayOnline">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.RegUserRegularOrderPayOnline@4bec1f0c]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.RegUserRegularOrderPayOnline@4bec1f0c]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.RegUserRegularOrderPayOnline -->
+      <class name="testcases.GuestUserRegularOrderPayOnline">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.GuestUserRegularOrderPayOnline@ff5b51f]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.GuestUserRegularOrderPayOnline@ff5b51f]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.GuestUserRegularOrderPayOnline -->
+      <class name="testcases.SocialMedia">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.SocialMedia@4566e5bd]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:testcases.SocialMedia@4566e5bd]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="login()[pri:0, instance:testcases.SocialMedia@4566e5bd]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:testcases.SocialMedia@4566e5bd]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.SocialMedia -->
+      <class name="testcases.GuestUserRegularPartyOrderPayAtRestaurant">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.GuestUserRegularPartyOrderPayAtRestaurant@29ca901e]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.GuestUserRegularPartyOrderPayAtRestaurant@29ca901e]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.GuestUserRegularPartyOrderPayAtRestaurant -->
+      <class name="testcases.ForgotPwd">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:testcases.ForgotPwd@73846619]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-02-10T11:33:39Z" finished-at="2017-02-10T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.ForgotPwd@73846619]" name="login" duration-ms="0" started-at="2017-02-10T11:33:39Z" data-provider="fetchData" finished-at="2017-02-10T11:33:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:150)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.ForgotPwd -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

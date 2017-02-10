@@ -111,7 +111,7 @@ public class GenericWrappers {
 	public boolean enterById(String idValue, String data) {
 		boolean bReturn = false;
 		try {
-			new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id(idValue)));
+			new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.id(idValue)));
 			driver.findElement(By.id(idValue)).clear();
 			driver.findElement(By.id(idValue)).sendKeys(data);	
 			Reporter.reportStep("The data: "+data+" entered successfully in field :"+idValue, "PASS");
@@ -140,7 +140,7 @@ public class GenericWrappers {
 		boolean bReturn = false;
 		String txt="";
 		try {
-			new WebDriverWait(driver, 20).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']")));
+			new WebDriverWait(driver, 30).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']")));
 			txt = driver.findElement(By.xpath(nameVal)).getAttribute("name");
 			driver.findElement(By.xpath(nameVal)).clear();
 			driver.findElement(By.xpath(nameVal)).sendKeys(data);	
@@ -296,7 +296,7 @@ public class GenericWrappers {
 	public boolean clickByLink(String name) {
 		boolean bReturn = false;
 		try{
-			new WebDriverWait(driver, 20).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']")));
+			new WebDriverWait(driver, 30).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']")));
 			//new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.linkText(name)));
 			driver.findElement(By.linkText(name)).click();
 			Reporter.reportStep("The element with link name: "+name+" is clicked.", "PASS");
@@ -317,7 +317,7 @@ public class GenericWrappers {
 		boolean bReturn = false;
 		String txt = "";
 		try{
-			new WebDriverWait(driver, 25).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']")));
+			new WebDriverWait(driver, 30).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']")));
 			new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpathVal)));
 			txt = driver.findElement(By.xpath(xpathVal)).getText();
 			if(txt==" ")
@@ -415,7 +415,7 @@ public class GenericWrappers {
 		try{
 			
 			new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.name(name)));
-			new WebDriverWait(driver, 20).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']")));
+			new WebDriverWait(driver, 30).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']")));
 			new Select(driver.findElement(By.name(name))).selectByVisibleText(value);;
 			Reporter.reportStep("The element with name: "+name+" is selected with value :"+value, "PASS");
 
@@ -526,7 +526,7 @@ public class GenericWrappers {
 			boolean bReturn = false;
 			String txt = "";
 			try{
-				new WebDriverWait(driver, 20).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']")));
+				new WebDriverWait(driver, 30).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']")));
 				new Select(driver.findElement(By.xpath(name))).selectByVisibleText(value);
 				txt = driver.findElement(By.xpath(name)).getText();
 
