@@ -1,0 +1,2780 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+ExtentReports Library 2.40.2 | http://relevantcodes.com/extentreports-for-selenium/ | https://github.com/anshooarora/
+Copyright (c) 2015, Anshoo Arora (Relevant Codes) | Copyrights licensed under the New BSD License | http://opensource.org/licenses/BSD-3-Clause
+Documentation: http://extentreports.relevantcodes.com 
+-->
+
+<meta charset='UTF-8' /> 
+<meta name='description' content='ExtentReports (by Anshoo Arora) is a reporting library for automation testing for .NET and Java. It creates detailed and beautiful HTML reports for modern browsers. ExtentReports shows test and step summary along with dashboards, system and environment details for quick analysis of your tests.' />
+<meta name='robots' content='noodp, noydir' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+
+<title>
+TestLeaf Selenium Automation Project
+</title>
+
+
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+<link href='https://cdn.rawgit.com/anshooarora/extentreports/e4f8ea1de961161791c01b99a71a1e17f81125cf/cdn/extent.css' type='text/css' rel='stylesheet' />
+
+<style>
+
+      
+        
+      
+    
+</style>
+</head>
+
+
+<body class='extent standard hide-overflow'>
+<!-- nav -->
+<nav>
+<div class='logo-container'>
+<a class='logo-content' href='http://extentreports.relevantcodes.com'>
+<span>ExtentReports</span>
+</a>
+<a href='#' data-activates='slide-out' class='button-collapse hide-on-large-only'><i class='mdi-navigation-apps'></i></a>
+</div>
+<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+<li class='analysis waves-effect'><a href='#!' class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a></li>
+</ul>
+<span class='report-name'>TestLeaf Selenium - POM Test Automation Report</span> <span class='report-headline'>This is Automation testing Project Template from TestLeaf</span>
+<ul class='right hide-on-med-and-down nav-right'>
+<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
+<i class='mdi-hardware-desktop-windows'></i>
+</li>
+<li>
+<span class='suite-started-time'>2017-02-13 02:41:01</span>
+</li>
+<li>
+<span>v2.40.2</span>
+</li>
+</ul>
+</nav>
+<!-- /nav -->
+
+<!-- container -->
+<div class='container'>
+
+<!-- dashboard -->
+<div id='dashboard-view' class='row'>
+<div class='time-totals'>
+<div class='col l2 m4 s6'>
+<div class='card suite-total-tests'> 
+<span class='panel-name'>Total Tests</span> 
+<span class='total-tests'> <span class='panel-lead'></span> </span> 
+</div> 
+</div>
+<div class='col l2 m4 s6'>
+<div class='card suite-total-steps'> 
+<span class='panel-name'>Total Steps</span> 
+<span class='total-steps'> <span class='panel-lead'></span> </span> 
+</div> 
+</div>
+<div class='col l2 m4 s12'>
+<div class='card suite-total-time-current'> 
+<span class='panel-name'>Total Time Taken (Current Run)</span> 
+<span class='suite-total-time-current-value panel-lead'>3h 12m 27s+539ms</span> 
+</div> 
+</div>
+<div class='col l2 m4 s12'>
+<div class='card suite-total-time-overall'> 
+<span class='panel-name'>Total Time Taken (Overall)</span> 
+<span class='suite-total-time-overall-value panel-lead'>136h 8167m 490036s+422ms</span> 
+</div> 
+</div>
+<div class='col l2 m4 s6 suite-start-time'>
+<div class='card accent green-accent'> 
+<span class='panel-name'>Start</span> 
+<span class='panel-lead suite-started-time'>2017-02-12 23:28:34</span> 
+</div> 
+</div>
+<div class='col l2 m4 s6 suite-end-time'>
+<div class='card accent pink-accent'> 
+<span class='panel-name'>End</span> 
+<span class='panel-lead suite-ended-time'>2017-02-13 02:41:01</span> 
+</div> 
+</div>
+</div>
+<div class='charts'>
+<div class='col s12 m6 l4 fh'> 
+<div class='card-panel'> 
+<div>
+<span class='panel-name'>Tests View</span>
+</div> 
+<div class='panel-setting modal-trigger test-count-setting right'>
+<a href='#test-count-setting'><i class='mdi-navigation-more-vert text-md'></i></a>
+</div> 
+<div class='chart-box'>
+<canvas class='text-centered' id='test-analysis'></canvas>
+</div> 
+<div>
+<span class='weight-light'><span class='t-pass-count weight-normal'></span> test(s) passed</span>
+</div> 
+<div>
+<span class='weight-light'><span class='t-fail-count weight-normal'></span> test(s) failed, <span class='t-others-count weight-normal'></span> others</span>
+</div> 
+</div> 
+</div> 
+<div class='col s12 m6 l4 fh'> 
+<div class='card-panel'> 
+<div>
+<span class='panel-name'>Steps View</span>
+</div> 
+<div class='panel-setting modal-trigger step-status-filter right'>
+<a href='#step-status-filter'><i class='mdi-navigation-more-vert text-md'></i></a>
+</div> 
+<div class='chart-box'>
+<canvas class='text-centered' id='step-analysis'></canvas>
+</div> 
+<div>
+<span class='weight-light'><span class='s-pass-count weight-normal'></span> step(s) passed </span>
+</div> 
+<div>
+<span class='weight-light'><span class='s-fail-count weight-normal'></span> step(s) failed, <span class='s-others-count weight-normal'></span> others</span>
+</div> 
+</div> 
+</div>
+<div class='col s12 m12 l4 fh'> 
+<div class='card-panel'> 
+<span class='panel-name'>Pass Percentage</span> 
+<span class='pass-percentage panel-lead'></span> 
+<div class='progress light-blue lighten-3'> 
+<div class='determinate light-blue'></div> 
+</div> 
+</div> 
+</div>
+</div>
+<div class='system-view'>
+<div class='col l4 m12 s12'>
+<div class='card-panel'>
+<span class='label info outline right'>Environment</span>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Windows 7</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>Sudharsan</td>
+</tr>
+<tr>
+<td>Java Version</td>
+<td>1.8.0_111</td>
+</tr>
+<tr>
+<td>Host Name</td>
+<td>SIPLDT1185</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- /dashboard -->
+
+<!-- tests -->
+<div id='test-view' class='row _addedTable'>
+<div class='col _addedCell1'>
+<div class='contents'>
+<div class='card-panel heading'>
+<h5>Tests</h5>
+</div>
+<div class='card-panel filters'>
+<div>
+<a data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#' class='dropdown-button button tests-toggle'><i class='mdi-action-subject icon'></i></a>
+<ul id='tests-toggle' class='dropdown-content'>
+<li class='pass'><a href='#!'>Pass</a></li>
+<li class='fail'><a href='#!'>Fail</a></li>
+<li class='skip'><a href='#!'>Skip</a></li>
+<li class='divider'></li>
+<li class='clear'><a href='#!'>Clear Filters</a></li>
+</ul>
+</div>
+<div>
+<a id='clear-filters' alt='Clear Filters' title='Clear Filters'><i class='mdi-navigation-close icon'></i></a>
+</div>
+<div>&nbsp;&middot;&nbsp;</div>
+<div>
+<a id='enableDashboard' alt='Enable Dashboard' title='Enable Dashboard'><i class='mdi-action-track-changes icon'></i></a>
+</div>
+<div>
+<a id='refreshCharts' alt='Refresh Charts on Filters' title='Refresh Charts on Filters' class='enabled'><i class='mdi-navigation-refresh icon'></i></i></a>
+</div>
+<div>&nbsp;&middot;</div>
+<div class='search' alt='Search Tests' title='Search Tests'>
+<div class='input-field left'>
+<input id='searchTests' type='text' class='validate' placeholder='Search Tests...'>
+</div>
+<i class='mdi-action-search icon'></i>
+</div>
+</div>
+<div class='card-panel no-padding-h no-padding-v no-margin-v'>
+<div class='wrapper'>
+<ul id='test-collection' class='test-collection'>
+<li class='collection-item test displayed active fail ' extentid='b7c2d134-a47a-4ca0-9e11-2eb26eec215a'>
+<div class='test-head'>
+<span class='test-name'>RegUserRegularOrderMultipleQuantity </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-12 23:28:34</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-12 23:29:36</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 2s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:44</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/407021286.jpg" src="./../reports/images/407021286.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:44</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/450266834.jpg" src="./../reports/images/450266834.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:45</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class="report-img" data-featherlight="./../reports/images/401208462.jpg" src="./../reports/images/401208462.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:46</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class="report-img" data-featherlight="./../reports/images/735292569.jpg" src="./../reports/images/735292569.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:46</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class="report-img" data-featherlight="./../reports/images/23421326.jpg" src="./../reports/images/23421326.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:46</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class="report-img" data-featherlight="./../reports/images/556958804.jpg" src="./../reports/images/556958804.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:53</td>
+<td class='step-details'>The element : MENU &amp; ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/300293253.jpg" src="./../reports/images/300293253.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:56</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 4.0 is clicked.<img class="report-img" data-featherlight="./../reports/images/137073979.jpg" src="./../reports/images/137073979.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:57</td>
+<td class='step-details'>The element : Honey Seared Wok-tossed crispy chicken in our signature honey-garlic sauce with red bell peppers, scallions and crispy rice noodles. is clicked.<img class="report-img" data-featherlight="./../reports/images/858541434.jpg" src="./../reports/images/858541434.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:58</td>
+<td class='step-details'>The data: 1 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/359994970.jpg" src="./../reports/images/359994970.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:58</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/82944204.jpg" src="./../reports/images/82944204.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:58</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/147775602.jpg" src="./../reports/images/147775602.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:59</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/556335444.jpg" src="./../reports/images/556335444.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:28:59</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/433883219.jpg" src="./../reports/images/433883219.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:29:01</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/399549619.jpg" src="./../reports/images/399549619.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:29:01</td>
+<td class='step-details'>The element : Kung Pao1 Wok-seared chicken in a chile-soy sauce with garlic,scallions, snap peas, carrots and roasted peanuts is clicked.<img class="report-img" data-featherlight="./../reports/images/489721478.jpg" src="./../reports/images/489721478.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:29:01</td>
+<td class='step-details'>The data: 2 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/209149661.jpg" src="./../reports/images/209149661.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:29:02</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/16542345.jpg" src="./../reports/images/16542345.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:29:02</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/300161284.jpg" src="./../reports/images/300161284.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:29:02</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/465937749.jpg" src="./../reports/images/465937749.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:29:03</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/723499782.jpg" src="./../reports/images/723499782.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:29:04</td>
+<td class='step-details'>The element : Orange Peel Chile bean garlic sauce, scallions, snap peas, carrots, orange peels is clicked.<img class="report-img" data-featherlight="./../reports/images/300094859.jpg" src="./../reports/images/300094859.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:29:05</td>
+<td class='step-details'>The data: 3 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/212308246.jpg" src="./../reports/images/212308246.jpg"></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>23:29:35</td>
+<td class='step-details'>The element with xpath: could not be clicked.<img class="report-img" data-featherlight="./../reports/images/135152004.jpg" src="./../reports/images/135152004.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='41d58cfc-39c0-4471-81e7-04cd378a847a'>
+<div class='test-head'>
+<span class='test-name'>RegUserRegularOrderMultipleQuantity </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-12 23:33:03</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-12 23:34:10</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 7s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:12</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/268306751.jpg" src="./../reports/images/268306751.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:12</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/808349360.jpg" src="./../reports/images/808349360.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:13</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class="report-img" data-featherlight="./../reports/images/307105844.jpg" src="./../reports/images/307105844.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:14</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class="report-img" data-featherlight="./../reports/images/382533768.jpg" src="./../reports/images/382533768.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:14</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class="report-img" data-featherlight="./../reports/images/453758832.jpg" src="./../reports/images/453758832.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:14</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class="report-img" data-featherlight="./../reports/images/395515394.jpg" src="./../reports/images/395515394.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:18</td>
+<td class='step-details'>The element : MENU &amp; ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/143521834.jpg" src="./../reports/images/143521834.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:20</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 4.0 is clicked.<img class="report-img" data-featherlight="./../reports/images/638943577.jpg" src="./../reports/images/638943577.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:23</td>
+<td class='step-details'>The element : Honey Seared Wok-tossed crispy chicken in our signature honey-garlic sauce with red bell peppers, scallions and crispy rice noodles. is clicked.<img class="report-img" data-featherlight="./../reports/images/739932850.jpg" src="./../reports/images/739932850.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:24</td>
+<td class='step-details'>The data: 1 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/909173296.jpg" src="./../reports/images/909173296.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:24</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/397012268.jpg" src="./../reports/images/397012268.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:25</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/905448792.jpg" src="./../reports/images/905448792.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:25</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/39009021.jpg" src="./../reports/images/39009021.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:25</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/235465783.jpg" src="./../reports/images/235465783.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:27</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/730660473.jpg" src="./../reports/images/730660473.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:27</td>
+<td class='step-details'>The element : Kung Pao1 Wok-seared chicken in a chile-soy sauce with garlic,scallions, snap peas, carrots and roasted peanuts is clicked.<img class="report-img" data-featherlight="./../reports/images/305334002.jpg" src="./../reports/images/305334002.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:27</td>
+<td class='step-details'>The data: 2 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/694773453.jpg" src="./../reports/images/694773453.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:28</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/453655978.jpg" src="./../reports/images/453655978.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:28</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/126325936.jpg" src="./../reports/images/126325936.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:28</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/737894021.jpg" src="./../reports/images/737894021.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:29</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/614314330.jpg" src="./../reports/images/614314330.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:30</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/697107824.jpg" src="./../reports/images/697107824.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:31</td>
+<td class='step-details'>The element : Orange Peel Chile bean garlic sauce, scallions, snap peas, carrots, orange peels is clicked.<img class="report-img" data-featherlight="./../reports/images/900429905.jpg" src="./../reports/images/900429905.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:31</td>
+<td class='step-details'>The data: 3 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/848500786.jpg" src="./../reports/images/848500786.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:31</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/697639125.jpg" src="./../reports/images/697639125.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:31</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/462482028.jpg" src="./../reports/images/462482028.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:32</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/562156472.jpg" src="./../reports/images/562156472.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:33</td>
+<td class='step-details'>The element : CHECK OUT NOW is clicked.<img class="report-img" data-featherlight="./../reports/images/513166663.jpg" src="./../reports/images/513166663.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:34</td>
+<td class='step-details'>The title of the page matches with the value :Extras | Order | Menu | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/767825607.jpg" src="./../reports/images/767825607.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:35</td>
+<td class='step-details'>The element with xpath: Select... Honey Sauce ($1.49) Lo Mein Sauce ($1.49) Mongolian Sauce ($1.49) Pei Wei Sauce ($1.49) Sweet Sour Sauce ($1.49) Teriyaki Sauce ($1.49) No Sauce ($0.99) is selected with value :White Rice ($0.49)<img class="report-img" data-featherlight="./../reports/images/880998077.jpg" src="./../reports/images/880998077.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:35</td>
+<td class='step-details'>The data: 2 entered successfully in field :<img class="report-img" data-featherlight="./../reports/images/395318641.jpg" src="./../reports/images/395318641.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:35</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/430642775.jpg" src="./../reports/images/430642775.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:35</td>
+<td class='step-details'>The title of the page matches with the value :Extras | Order | Menu | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/781642522.jpg" src="./../reports/images/781642522.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:33:36</td>
+<td class='step-details'>The element : CHECKOUT is clicked.<img class="report-img" data-featherlight="./../reports/images/641202228.jpg" src="./../reports/images/641202228.jpg"></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>23:34:09</td>
+<td class='step-details'>The data: 03/03/2017 could not be entered in the field :<img class="report-img" data-featherlight="./../reports/images/394394054.jpg" src="./../reports/images/394394054.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='a35f11e0-0a10-40fa-97c6-f1f2adcabc3a'>
+<div class='test-head'>
+<span class='test-name'>RegUserRegularOrderMultipleQuantity </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-12 23:44:54</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-12 23:45:41</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 47s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:04</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/862753676.jpg" src="./../reports/images/862753676.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:04</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/272308691.jpg" src="./../reports/images/272308691.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:05</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class="report-img" data-featherlight="./../reports/images/409596676.jpg" src="./../reports/images/409596676.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:05</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class="report-img" data-featherlight="./../reports/images/516044914.jpg" src="./../reports/images/516044914.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:06</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class="report-img" data-featherlight="./../reports/images/498345161.jpg" src="./../reports/images/498345161.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:06</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class="report-img" data-featherlight="./../reports/images/92536942.jpg" src="./../reports/images/92536942.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:11</td>
+<td class='step-details'>The element : MENU &amp; ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/113966789.jpg" src="./../reports/images/113966789.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:14</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 4.0 is clicked.<img class="report-img" data-featherlight="./../reports/images/527962543.jpg" src="./../reports/images/527962543.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:15</td>
+<td class='step-details'>The element : Honey Seared Wok-tossed crispy chicken in our signature honey-garlic sauce with red bell peppers, scallions and crispy rice noodles. is clicked.<img class="report-img" data-featherlight="./../reports/images/379742007.jpg" src="./../reports/images/379742007.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:16</td>
+<td class='step-details'>The data: 1 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/131436297.jpg" src="./../reports/images/131436297.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:16</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/872005544.jpg" src="./../reports/images/872005544.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:16</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/728671386.jpg" src="./../reports/images/728671386.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:17</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/594790009.jpg" src="./../reports/images/594790009.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:17</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/738350267.jpg" src="./../reports/images/738350267.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:19</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/861789192.jpg" src="./../reports/images/861789192.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:19</td>
+<td class='step-details'>The element : Japanese Steak &amp; Shrimp Chile Ramen Wok-seared egg noodles, steak and shrimp in a spicy-savory Japanese sauce with minced garlic, onion, carrots, scallions, cilantro and lime. is clicked.<img class="report-img" data-featherlight="./../reports/images/36736989.jpg" src="./../reports/images/36736989.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:19</td>
+<td class='step-details'>The data: 2 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/851755720.jpg" src="./../reports/images/851755720.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:20</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/885614938.jpg" src="./../reports/images/885614938.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:21</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/39804486.jpg" src="./../reports/images/39804486.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:22</td>
+<td class='step-details'>The element : Orange Peel Chile bean garlic sauce, scallions, snap peas, carrots, orange peels is clicked.<img class="report-img" data-featherlight="./../reports/images/456584478.jpg" src="./../reports/images/456584478.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:22</td>
+<td class='step-details'>The data: 3 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/611933782.jpg" src="./../reports/images/611933782.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:22</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/589762508.jpg" src="./../reports/images/589762508.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:23</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/495448393.jpg" src="./../reports/images/495448393.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:23</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/440676970.jpg" src="./../reports/images/440676970.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:24</td>
+<td class='step-details'>The element : CHECK OUT NOW is clicked.<img class="report-img" data-featherlight="./../reports/images/13060931.jpg" src="./../reports/images/13060931.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:25</td>
+<td class='step-details'>The element with xpath: Select... Honey Sauce ($1.49) Lo Mein Sauce ($1.49) Mongolian Sauce ($1.49) Pei Wei Sauce ($1.49) Sweet Sour Sauce ($1.49) Teriyaki Sauce ($1.49) No Sauce ($0.99) is selected with value :White Rice ($0.49)<img class="report-img" data-featherlight="./../reports/images/580850593.jpg" src="./../reports/images/580850593.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:26</td>
+<td class='step-details'>The data: 2 entered successfully in field :<img class="report-img" data-featherlight="./../reports/images/237255630.jpg" src="./../reports/images/237255630.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:26</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/715381708.jpg" src="./../reports/images/715381708.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:26</td>
+<td class='step-details'>The title of the page matches with the value :Extras | Order | Menu | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/677921757.jpg" src="./../reports/images/677921757.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:26</td>
+<td class='step-details'>The element : CHECKOUT is clicked.<img class="report-img" data-featherlight="./../reports/images/890102358.jpg" src="./../reports/images/890102358.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:30</td>
+<td class='step-details'>The data: 03/03/2017 entered successfully in field :date<img class="report-img" data-featherlight="./../reports/images/909188883.jpg" src="./../reports/images/909188883.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:30</td>
+<td class='step-details'>The element with name: time is selected with value :12:00 PM<img class="report-img" data-featherlight="./../reports/images/270004329.jpg" src="./../reports/images/270004329.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:31</td>
+<td class='step-details'>The element : PLACE ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/823374702.jpg" src="./../reports/images/823374702.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:40</td>
+<td class='step-details'>The text: 12:00 PM on Friday, March 3rd contains the value :March 3<img class="report-img" data-featherlight="./../reports/images/848661039.jpg" src="./../reports/images/848661039.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:45:40</td>
+<td class='step-details'>The text: 12:00 PM on Friday, March 3rd contains the value :12:00 PM<img class="report-img" data-featherlight="./../reports/images/44926941.jpg" src="./../reports/images/44926941.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='c534085a-7292-4671-9721-ce3f79a1abf5'>
+<div class='test-head'>
+<span class='test-name'>RegUserRegularOrderMultipleQuantity </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-12 23:49:25</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-12 23:50:10</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 45s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:35</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/268371902.jpg" src="./../reports/images/268371902.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:35</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/195415405.jpg" src="./../reports/images/195415405.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:36</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class="report-img" data-featherlight="./../reports/images/145309786.jpg" src="./../reports/images/145309786.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:36</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class="report-img" data-featherlight="./../reports/images/480737006.jpg" src="./../reports/images/480737006.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:37</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class="report-img" data-featherlight="./../reports/images/814220432.jpg" src="./../reports/images/814220432.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:37</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class="report-img" data-featherlight="./../reports/images/23891696.jpg" src="./../reports/images/23891696.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:41</td>
+<td class='step-details'>The element : MENU &amp; ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/413067871.jpg" src="./../reports/images/413067871.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:43</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 4.0 is clicked.<img class="report-img" data-featherlight="./../reports/images/32566121.jpg" src="./../reports/images/32566121.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:44</td>
+<td class='step-details'>The element : Honey Seared Wok-tossed crispy chicken in our signature honey-garlic sauce with red bell peppers, scallions and crispy rice noodles. is clicked.<img class="report-img" data-featherlight="./../reports/images/547298182.jpg" src="./../reports/images/547298182.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:45</td>
+<td class='step-details'>The data: 1 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/857345294.jpg" src="./../reports/images/857345294.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:45</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/769427409.jpg" src="./../reports/images/769427409.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:46</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/47516529.jpg" src="./../reports/images/47516529.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:46</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/236715879.jpg" src="./../reports/images/236715879.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:46</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/150228177.jpg" src="./../reports/images/150228177.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:48</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/745655581.jpg" src="./../reports/images/745655581.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:48</td>
+<td class='step-details'>The element : Japanese Steak &amp; Shrimp Chile Ramen Wok-seared egg noodles, steak and shrimp in a spicy-savory Japanese sauce with minced garlic, onion, carrots, scallions, cilantro and lime. is clicked.<img class="report-img" data-featherlight="./../reports/images/328448913.jpg" src="./../reports/images/328448913.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:49</td>
+<td class='step-details'>The data: 2 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/689327567.jpg" src="./../reports/images/689327567.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:49</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/274376613.jpg" src="./../reports/images/274376613.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:50</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/433681343.jpg" src="./../reports/images/433681343.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:51</td>
+<td class='step-details'>The element : Orange Peel Chile bean garlic sauce, scallions, snap peas, carrots, orange peels is clicked.<img class="report-img" data-featherlight="./../reports/images/202716586.jpg" src="./../reports/images/202716586.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:51</td>
+<td class='step-details'>The data: 3 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/68235525.jpg" src="./../reports/images/68235525.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:52</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/874346070.jpg" src="./../reports/images/874346070.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:52</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/707508845.jpg" src="./../reports/images/707508845.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:52</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/762678131.jpg" src="./../reports/images/762678131.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:54</td>
+<td class='step-details'>The element : CHECK OUT NOW is clicked.<img class="report-img" data-featherlight="./../reports/images/108364960.jpg" src="./../reports/images/108364960.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:55</td>
+<td class='step-details'>The element with xpath: Select... Honey Sauce ($1.49) Lo Mein Sauce ($1.49) Mongolian Sauce ($1.49) Pei Wei Sauce ($1.49) Sweet Sour Sauce ($1.49) Teriyaki Sauce ($1.49) No Sauce ($0.99) is selected with value :White Rice ($0.49)<img class="report-img" data-featherlight="./../reports/images/824157504.jpg" src="./../reports/images/824157504.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:55</td>
+<td class='step-details'>The data: 2 entered successfully in field :<img class="report-img" data-featherlight="./../reports/images/208001565.jpg" src="./../reports/images/208001565.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:55</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/250517547.jpg" src="./../reports/images/250517547.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:56</td>
+<td class='step-details'>The title of the page matches with the value :Extras | Order | Menu | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/40448082.jpg" src="./../reports/images/40448082.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:56</td>
+<td class='step-details'>The element : CHECKOUT is clicked.<img class="report-img" data-featherlight="./../reports/images/199072826.jpg" src="./../reports/images/199072826.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:49:59</td>
+<td class='step-details'>The data: 03/03/2017 entered successfully in field :date<img class="report-img" data-featherlight="./../reports/images/16377205.jpg" src="./../reports/images/16377205.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:50:00</td>
+<td class='step-details'>The element with name: time is selected with value :12:00 PM<img class="report-img" data-featherlight="./../reports/images/383475196.jpg" src="./../reports/images/383475196.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:50:00</td>
+<td class='step-details'>The element : PLACE ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/405724679.jpg" src="./../reports/images/405724679.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:50:08</td>
+<td class='step-details'>The text: 12:00 PM on Friday, March 3rd contains the value :March 3<img class="report-img" data-featherlight="./../reports/images/501997536.jpg" src="./../reports/images/501997536.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:50:09</td>
+<td class='step-details'>The text: 12:00 PM on Friday, March 3rd contains the value :12:00 PM<img class="report-img" data-featherlight="./../reports/images/178131762.jpg" src="./../reports/images/178131762.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='ebb3b21e-137f-4ecf-ac39-19ab057f868d'>
+<div class='test-head'>
+<span class='test-name'>RegUserRegularOrderMultipleQuantity </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 00:17:00</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 00:18:37</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 37s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:09</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/137449378.jpg" src="./../reports/images/137449378.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:10</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/198454443.jpg" src="./../reports/images/198454443.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:10</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class="report-img" data-featherlight="./../reports/images/358549302.jpg" src="./../reports/images/358549302.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:11</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class="report-img" data-featherlight="./../reports/images/74639038.jpg" src="./../reports/images/74639038.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:11</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class="report-img" data-featherlight="./../reports/images/127920512.jpg" src="./../reports/images/127920512.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:11</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class="report-img" data-featherlight="./../reports/images/112853348.jpg" src="./../reports/images/112853348.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:35</td>
+<td class='step-details'>The element : MENU &amp; ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/607812611.jpg" src="./../reports/images/607812611.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:44</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 4.0 is clicked.<img class="report-img" data-featherlight="./../reports/images/670100716.jpg" src="./../reports/images/670100716.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:46</td>
+<td class='step-details'>The element : Honey Seared Wok-tossed crispy chicken in our signature honey-garlic sauce with red bell peppers, scallions and crispy rice noodles. is clicked.<img class="report-img" data-featherlight="./../reports/images/699319791.jpg" src="./../reports/images/699319791.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:46</td>
+<td class='step-details'>The data: 1 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/411813316.jpg" src="./../reports/images/411813316.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:46</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/165192292.jpg" src="./../reports/images/165192292.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:47</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/67727491.jpg" src="./../reports/images/67727491.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:47</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/674156393.jpg" src="./../reports/images/674156393.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:48</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/581441747.jpg" src="./../reports/images/581441747.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:49</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/726707509.jpg" src="./../reports/images/726707509.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:49</td>
+<td class='step-details'>The element : Japanese Steak &amp; Shrimp Chile Ramen Wok-seared egg noodles, steak and shrimp in a spicy-savory Japanese sauce with minced garlic, onion, carrots, scallions, cilantro and lime. is clicked.<img class="report-img" data-featherlight="./../reports/images/839384932.jpg" src="./../reports/images/839384932.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:50</td>
+<td class='step-details'>The data: 2 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/805785037.jpg" src="./../reports/images/805785037.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:50</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/232092921.jpg" src="./../reports/images/232092921.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:52</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/343233903.jpg" src="./../reports/images/343233903.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:52</td>
+<td class='step-details'>The element : Orange Peel Chile bean garlic sauce, scallions, snap peas, carrots, orange peels is clicked.<img class="report-img" data-featherlight="./../reports/images/280159518.jpg" src="./../reports/images/280159518.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:52</td>
+<td class='step-details'>The data: 3 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/414582528.jpg" src="./../reports/images/414582528.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:53</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/770548772.jpg" src="./../reports/images/770548772.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:53</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/169093613.jpg" src="./../reports/images/169093613.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:54</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/91594316.jpg" src="./../reports/images/91594316.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:55</td>
+<td class='step-details'>The element : CHECK OUT NOW is clicked.<img class="report-img" data-featherlight="./../reports/images/232355722.jpg" src="./../reports/images/232355722.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:56</td>
+<td class='step-details'>The element with xpath: Select... Honey Sauce ($1.49) Lo Mein Sauce ($1.49) Mongolian Sauce ($1.49) Pei Wei Sauce ($1.49) Sweet Sour Sauce ($1.49) Teriyaki Sauce ($1.49) No Sauce ($0.99) is selected with value :White Rice ($0.49)<img class="report-img" data-featherlight="./../reports/images/820999232.jpg" src="./../reports/images/820999232.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:56</td>
+<td class='step-details'>The data: 2 entered successfully in field :<img class="report-img" data-featherlight="./../reports/images/314205661.jpg" src="./../reports/images/314205661.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:57</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/552676242.jpg" src="./../reports/images/552676242.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:57</td>
+<td class='step-details'>The title of the page matches with the value :Extras | Order | Menu | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/387600583.jpg" src="./../reports/images/387600583.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:17:57</td>
+<td class='step-details'>The element : CHECKOUT is clicked.<img class="report-img" data-featherlight="./../reports/images/171293637.jpg" src="./../reports/images/171293637.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:18:11</td>
+<td class='step-details'>The data: 03/03/2017 entered successfully in field :date<img class="report-img" data-featherlight="./../reports/images/497491993.jpg" src="./../reports/images/497491993.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:18:11</td>
+<td class='step-details'>The element with name: time is selected with value :12:00 PM<img class="report-img" data-featherlight="./../reports/images/664295931.jpg" src="./../reports/images/664295931.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:18:12</td>
+<td class='step-details'>The element : PLACE ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/250199240.jpg" src="./../reports/images/250199240.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:18:36</td>
+<td class='step-details'>The text: 12:00 PM on Friday, March 3rd contains the value :March 3<img class="report-img" data-featherlight="./../reports/images/417243168.jpg" src="./../reports/images/417243168.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:18:36</td>
+<td class='step-details'>The text: 12:00 PM on Friday, March 3rd contains the value :12:00 PM<img class="report-img" data-featherlight="./../reports/images/841348780.jpg" src="./../reports/images/841348780.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='b2a8ee61-a86c-490e-b105-d56cd5655bf9'>
+<div class='test-head'>
+<span class='test-name'>RegUserRegularOrderMultipleQuantity </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 00:34:05</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 00:34:57</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 52s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:20</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/748843523.jpg" src="./../reports/images/748843523.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:21</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/682737343.jpg" src="./../reports/images/682737343.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:21</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class="report-img" data-featherlight="./../reports/images/644885592.jpg" src="./../reports/images/644885592.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:22</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class="report-img" data-featherlight="./../reports/images/302591922.jpg" src="./../reports/images/302591922.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:22</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class="report-img" data-featherlight="./../reports/images/281863075.jpg" src="./../reports/images/281863075.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:22</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class="report-img" data-featherlight="./../reports/images/899939647.jpg" src="./../reports/images/899939647.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:26</td>
+<td class='step-details'>The element : MENU &amp; ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/816874541.jpg" src="./../reports/images/816874541.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:28</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 4.0 is clicked.<img class="report-img" data-featherlight="./../reports/images/790727256.jpg" src="./../reports/images/790727256.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:30</td>
+<td class='step-details'>The element : Honey Seared Wok-tossed crispy chicken in our signature honey-garlic sauce with red bell peppers, scallions and crispy rice noodles. is clicked.<img class="report-img" data-featherlight="./../reports/images/219752374.jpg" src="./../reports/images/219752374.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:30</td>
+<td class='step-details'>The data: 1 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/513202609.jpg" src="./../reports/images/513202609.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:31</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/605386457.jpg" src="./../reports/images/605386457.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:31</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/283938174.jpg" src="./../reports/images/283938174.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:31</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/263797210.jpg" src="./../reports/images/263797210.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:32</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/542077344.jpg" src="./../reports/images/542077344.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:33</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/541557987.jpg" src="./../reports/images/541557987.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:34</td>
+<td class='step-details'>The element : Japanese Steak &amp; Shrimp Chile Ramen Wok-seared egg noodles, steak and shrimp in a spicy-savory Japanese sauce with minced garlic, onion, carrots, scallions, cilantro and lime. is clicked.<img class="report-img" data-featherlight="./../reports/images/888960136.jpg" src="./../reports/images/888960136.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:34</td>
+<td class='step-details'>The data: 2 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/511599706.jpg" src="./../reports/images/511599706.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:35</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/884174144.jpg" src="./../reports/images/884174144.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:36</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/184672692.jpg" src="./../reports/images/184672692.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:36</td>
+<td class='step-details'>The element : Orange Peel Chile bean garlic sauce, scallions, snap peas, carrots, orange peels is clicked.<img class="report-img" data-featherlight="./../reports/images/644747210.jpg" src="./../reports/images/644747210.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:37</td>
+<td class='step-details'>The data: 3 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/615591554.jpg" src="./../reports/images/615591554.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:37</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/837284490.jpg" src="./../reports/images/837284490.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:37</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/777871212.jpg" src="./../reports/images/777871212.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:38</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/479749289.jpg" src="./../reports/images/479749289.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:39</td>
+<td class='step-details'>The element : CHECK OUT NOW is clicked.<img class="report-img" data-featherlight="./../reports/images/360998195.jpg" src="./../reports/images/360998195.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:40</td>
+<td class='step-details'>The title of the page matches with the value :Extras | Order | Menu | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/863067464.jpg" src="./../reports/images/863067464.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:40</td>
+<td class='step-details'>The element with xpath: Select... Honey Sauce ($1.49) Lo Mein Sauce ($1.49) Mongolian Sauce ($1.49) Pei Wei Sauce ($1.49) Sweet Sour Sauce ($1.49) Teriyaki Sauce ($1.49) No Sauce ($0.99) is selected with value :White Rice ($0.49)<img class="report-img" data-featherlight="./../reports/images/269583128.jpg" src="./../reports/images/269583128.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:41</td>
+<td class='step-details'>The data: 2 entered successfully in field :<img class="report-img" data-featherlight="./../reports/images/232818518.jpg" src="./../reports/images/232818518.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:41</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/475059252.jpg" src="./../reports/images/475059252.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:41</td>
+<td class='step-details'>The title of the page matches with the value :Extras | Order | Menu | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/903293933.jpg" src="./../reports/images/903293933.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:42</td>
+<td class='step-details'>The element : CHECKOUT is clicked.<img class="report-img" data-featherlight="./../reports/images/198291931.jpg" src="./../reports/images/198291931.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:45</td>
+<td class='step-details'>The data: 03/03/2017 entered successfully in field :date<img class="report-img" data-featherlight="./../reports/images/828119559.jpg" src="./../reports/images/828119559.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:45</td>
+<td class='step-details'>The element with name: time is selected with value :12:00 PM<img class="report-img" data-featherlight="./../reports/images/531224043.jpg" src="./../reports/images/531224043.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:46</td>
+<td class='step-details'>The element : PLACE ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/906946999.jpg" src="./../reports/images/906946999.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:56</td>
+<td class='step-details'>The text: 12:00 PM on Friday, March 3rd contains the value :March 3<img class="report-img" data-featherlight="./../reports/images/823359006.jpg" src="./../reports/images/823359006.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:34:56</td>
+<td class='step-details'>The text: 12:00 PM on Friday, March 3rd contains the value :12:00 PM<img class="report-img" data-featherlight="./../reports/images/725339772.jpg" src="./../reports/images/725339772.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='99338813-198e-452c-88c4-26fa8d364afd'>
+<div class='test-head'>
+<span class='test-name'>RegUserRegularOrderMultipleQuantity </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 00:35:11</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 00:35:56</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 45s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:20</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/121218452.jpg" src="./../reports/images/121218452.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:21</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/67252884.jpg" src="./../reports/images/67252884.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:22</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class="report-img" data-featherlight="./../reports/images/232861636.jpg" src="./../reports/images/232861636.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:22</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class="report-img" data-featherlight="./../reports/images/59646209.jpg" src="./../reports/images/59646209.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:22</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class="report-img" data-featherlight="./../reports/images/203975333.jpg" src="./../reports/images/203975333.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:23</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class="report-img" data-featherlight="./../reports/images/351023352.jpg" src="./../reports/images/351023352.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:27</td>
+<td class='step-details'>The element : MENU &amp; ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/182099622.jpg" src="./../reports/images/182099622.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:29</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 4.0 is clicked.<img class="report-img" data-featherlight="./../reports/images/187147145.jpg" src="./../reports/images/187147145.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:30</td>
+<td class='step-details'>The element : Honey Seared Wok-tossed crispy chicken in our signature honey-garlic sauce with red bell peppers, scallions and crispy rice noodles. is clicked.<img class="report-img" data-featherlight="./../reports/images/843805763.jpg" src="./../reports/images/843805763.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:31</td>
+<td class='step-details'>The data: 1 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/511312759.jpg" src="./../reports/images/511312759.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:31</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/677080072.jpg" src="./../reports/images/677080072.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:31</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/536942008.jpg" src="./../reports/images/536942008.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:32</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/833914089.jpg" src="./../reports/images/833914089.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:32</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/73793193.jpg" src="./../reports/images/73793193.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:34</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/867893226.jpg" src="./../reports/images/867893226.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:34</td>
+<td class='step-details'>The element : Japanese Steak &amp; Shrimp Chile Ramen Wok-seared egg noodles, steak and shrimp in a spicy-savory Japanese sauce with minced garlic, onion, carrots, scallions, cilantro and lime. is clicked.<img class="report-img" data-featherlight="./../reports/images/61368147.jpg" src="./../reports/images/61368147.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:34</td>
+<td class='step-details'>The data: 2 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/539959796.jpg" src="./../reports/images/539959796.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:35</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/819490844.jpg" src="./../reports/images/819490844.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:36</td>
+<td class='step-details'>The element : KEEP LOOKING is clicked.<img class="report-img" data-featherlight="./../reports/images/269992334.jpg" src="./../reports/images/269992334.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:37</td>
+<td class='step-details'>The element : Orange Peel Chile bean garlic sauce, scallions, snap peas, carrots, orange peels is clicked.<img class="report-img" data-featherlight="./../reports/images/320908105.jpg" src="./../reports/images/320908105.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:37</td>
+<td class='step-details'>The data: 3 entered successfully in field :quantity<img class="report-img" data-featherlight="./../reports/images/173234431.jpg" src="./../reports/images/173234431.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:37</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/160053492.jpg" src="./../reports/images/160053492.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:38</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/819503180.jpg" src="./../reports/images/819503180.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:38</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/551011669.jpg" src="./../reports/images/551011669.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:40</td>
+<td class='step-details'>The element : CHECK OUT NOW is clicked.<img class="report-img" data-featherlight="./../reports/images/807561313.jpg" src="./../reports/images/807561313.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:41</td>
+<td class='step-details'>The element with xpath: Select... Honey Sauce ($1.49) Lo Mein Sauce ($1.49) Mongolian Sauce ($1.49) Pei Wei Sauce ($1.49) Sweet Sour Sauce ($1.49) Teriyaki Sauce ($1.49) No Sauce ($0.99) is selected with value :White Rice ($0.49)<img class="report-img" data-featherlight="./../reports/images/204305409.jpg" src="./../reports/images/204305409.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:41</td>
+<td class='step-details'>The data: 2 entered successfully in field :<img class="report-img" data-featherlight="./../reports/images/887315442.jpg" src="./../reports/images/887315442.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:41</td>
+<td class='step-details'>The element : ADD TO ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/33211764.jpg" src="./../reports/images/33211764.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:41</td>
+<td class='step-details'>The title of the page matches with the value :Extras | Order | Menu | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/260993961.jpg" src="./../reports/images/260993961.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:42</td>
+<td class='step-details'>The element : CHECKOUT is clicked.<img class="report-img" data-featherlight="./../reports/images/353810017.jpg" src="./../reports/images/353810017.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:46</td>
+<td class='step-details'>The data: 03/03/2017 entered successfully in field :date<img class="report-img" data-featherlight="./../reports/images/294156885.jpg" src="./../reports/images/294156885.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:46</td>
+<td class='step-details'>The element with name: time is selected with value :12:00 PM<img class="report-img" data-featherlight="./../reports/images/464159948.jpg" src="./../reports/images/464159948.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:47</td>
+<td class='step-details'>The element : PLACE ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/841999890.jpg" src="./../reports/images/841999890.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:55</td>
+<td class='step-details'>The text: 12:00 PM on Friday, March 3rd contains the value :March 3<img class="report-img" data-featherlight="./../reports/images/673514058.jpg" src="./../reports/images/673514058.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>00:35:55</td>
+<td class='step-details'>The text: 12:00 PM on Friday, March 3rd contains the value :12:00 PM<img class="report-img" data-featherlight="./../reports/images/126080783.jpg" src="./../reports/images/126080783.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='d861987d-0b02-4737-9569-94b00d66cc13'>
+<div class='test-head'>
+<span class='test-name'>FooterLinks </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 01:35:12</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 01:36:08</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 56s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:21</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/813604110.jpg" src="./../reports/images/813604110.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:22</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/355207674.jpg" src="./../reports/images/355207674.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:23</td>
+<td class='step-details'>The element with link name: Contact Us is clicked.<img class="report-img" data-featherlight="./../reports/images/821861777.jpg" src="./../reports/images/821861777.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:23</td>
+<td class='step-details'>The title of the page matches with the value :Contact Us | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/662308945.jpg" src="./../reports/images/662308945.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:49</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/272977578.jpg" src="./../reports/images/272977578.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:49</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/321093150.jpg" src="./../reports/images/321093150.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:50</td>
+<td class='step-details'>The element : Site Map is clicked.<img class="report-img" data-featherlight="./../reports/images/623321631.jpg" src="./../reports/images/623321631.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:51</td>
+<td class='step-details'>The title of the page matches with the value :Site Map | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/476531056.jpg" src="./../reports/images/476531056.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:51</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/605368726.jpg" src="./../reports/images/605368726.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:54</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/831482680.jpg" src="./../reports/images/831482680.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:55</td>
+<td class='step-details'>The element : View All Restaurant Locations is clicked.<img class="report-img" data-featherlight="./../reports/images/414772150.jpg" src="./../reports/images/414772150.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:56</td>
+<td class='step-details'>The title of the page matches with the value :All Locations | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/896472738.jpg" src="./../reports/images/896472738.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:56</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/377221806.jpg" src="./../reports/images/377221806.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:35:59</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/786546645.jpg" src="./../reports/images/786546645.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:36:00</td>
+<td class='step-details'>The element : Careers is clicked.<img class="report-img" data-featherlight="./../reports/images/582091978.jpg" src="./../reports/images/582091978.jpg"></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>01:36:07</td>
+<td class='step-details'>The title did not match<img class="report-img" data-featherlight="./../reports/images/884981181.jpg" src="./../reports/images/884981181.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='c5d3de2c-ea74-4c3e-adf3-4205a260f5bb'>
+<div class='test-head'>
+<span class='test-name'>FooterLinks </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 01:41:04</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 01:41:21</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 17s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:41:16</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/677589169.jpg" src="./../reports/images/677589169.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:41:17</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/98368611.jpg" src="./../reports/images/98368611.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:41:18</td>
+<td class='step-details'>The element with link name: Contact Us is clicked.<img class="report-img" data-featherlight="./../reports/images/613052553.jpg" src="./../reports/images/613052553.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:41:18</td>
+<td class='step-details'>The title of the page matches with the value :Contact Us | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/401885965.jpg" src="./../reports/images/401885965.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:41:19</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/218877185.jpg" src="./../reports/images/218877185.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:41:20</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/721374300.jpg" src="./../reports/images/721374300.jpg"></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>01:41:20</td>
+<td class='step-details'>The element with xpath: could not be clicked.<img class="report-img" data-featherlight="./../reports/images/832174660.jpg" src="./../reports/images/832174660.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='794ee21a-ba9a-466b-abfb-04b0032dbf36'>
+<div class='test-head'>
+<span class='test-name'>FooterLinks </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 01:44:15</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 01:44:32</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 17s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:44:23</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/673142850.jpg" src="./../reports/images/673142850.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:44:24</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/483495940.jpg" src="./../reports/images/483495940.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:44:25</td>
+<td class='step-details'>The element with link name: Contact Us is clicked.<img class="report-img" data-featherlight="./../reports/images/708282406.jpg" src="./../reports/images/708282406.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:44:25</td>
+<td class='step-details'>The title of the page matches with the value :Contact Us | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/346139712.jpg" src="./../reports/images/346139712.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:44:26</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/839930297.jpg" src="./../reports/images/839930297.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:44:27</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/619082241.jpg" src="./../reports/images/619082241.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:44:27</td>
+<td class='step-details'>The element with link name: Site Map is clicked.<img class="report-img" data-featherlight="./../reports/images/790630743.jpg" src="./../reports/images/790630743.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:44:27</td>
+<td class='step-details'>The title of the page matches with the value :Site Map | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/726684082.jpg" src="./../reports/images/726684082.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:44:28</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/215540391.jpg" src="./../reports/images/215540391.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:44:31</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/53962548.jpg" src="./../reports/images/53962548.jpg"></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>01:44:31</td>
+<td class='step-details'>The element with link name: null could not be clicked.<img class="report-img" data-featherlight="./../reports/images/363794666.jpg" src="./../reports/images/363794666.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='7b924a05-d073-47c2-adb9-8997fb41d7c8'>
+<div class='test-head'>
+<span class='test-name'>FooterLinks </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 01:46:03</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 01:47:11</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 8s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:12</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/258953142.jpg" src="./../reports/images/258953142.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:12</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/209930222.jpg" src="./../reports/images/209930222.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:13</td>
+<td class='step-details'>The element with link name: Contact Us is clicked.<img class="report-img" data-featherlight="./../reports/images/380712192.jpg" src="./../reports/images/380712192.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:13</td>
+<td class='step-details'>The title of the page matches with the value :Contact Us | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/261798508.jpg" src="./../reports/images/261798508.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:15</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/898849386.jpg" src="./../reports/images/898849386.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:15</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/43899669.jpg" src="./../reports/images/43899669.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:16</td>
+<td class='step-details'>The element with link name: Site Map is clicked.<img class="report-img" data-featherlight="./../reports/images/855790614.jpg" src="./../reports/images/855790614.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:16</td>
+<td class='step-details'>The title of the page matches with the value :Site Map | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/905548849.jpg" src="./../reports/images/905548849.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:17</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/116542293.jpg" src="./../reports/images/116542293.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:19</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/608028343.jpg" src="./../reports/images/608028343.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:20</td>
+<td class='step-details'>The element with link name: View All Restaurant Locations is clicked.<img class="report-img" data-featherlight="./../reports/images/607030138.jpg" src="./../reports/images/607030138.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:20</td>
+<td class='step-details'>The title of the page matches with the value :All Locations | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/698222076.jpg" src="./../reports/images/698222076.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:21</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/211613186.jpg" src="./../reports/images/211613186.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:24</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/243360468.jpg" src="./../reports/images/243360468.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:24</td>
+<td class='step-details'>The element with link name: Careers is clicked.<img class="report-img" data-featherlight="./../reports/images/463909897.jpg" src="./../reports/images/463909897.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:49</td>
+<td class='step-details'>The title of the page matches with the value :Jobs at Pei Wei | Join our team of culinary professionals today! | Home<img class="report-img" data-featherlight="./../reports/images/251945115.jpg" src="./../reports/images/251945115.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:55</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/791532556.jpg" src="./../reports/images/791532556.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:55</td>
+<td class='step-details'>The element with link name: Pei Wei Local is clicked.<img class="report-img" data-featherlight="./../reports/images/419482565.jpg" src="./../reports/images/419482565.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:55</td>
+<td class='step-details'>The title of the page matches with the value :Pei Wei Local | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/410970765.jpg" src="./../reports/images/410970765.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:57</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/631348228.jpg" src="./../reports/images/631348228.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:46:59</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/659106250.jpg" src="./../reports/images/659106250.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:47:00</td>
+<td class='step-details'>The element with link name: Investors is clicked.<img class="report-img" data-featherlight="./../reports/images/446993820.jpg" src="./../reports/images/446993820.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:47:04</td>
+<td class='step-details'>The title of the page matches with the value :PFCB P.F. Chang's China Bistro Inc. - Investor Relations - Investors<img class="report-img" data-featherlight="./../reports/images/239650045.jpg" src="./../reports/images/239650045.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:47:09</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/61932078.jpg" src="./../reports/images/61932078.jpg"></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>01:47:10</td>
+<td class='step-details'>The element with link name: null could not be clicked.<img class="report-img" data-featherlight="./../reports/images/329706695.jpg" src="./../reports/images/329706695.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='644b0dc3-9d05-481f-81e8-2ab95a120e47'>
+<div class='test-head'>
+<span class='test-name'>FooterLinks </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 01:48:00</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 01:49:26</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 26s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:09</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/204156363.jpg" src="./../reports/images/204156363.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:10</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/331034953.jpg" src="./../reports/images/331034953.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:11</td>
+<td class='step-details'>The element with link name: Contact Us is clicked.<img class="report-img" data-featherlight="./../reports/images/728082735.jpg" src="./../reports/images/728082735.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:11</td>
+<td class='step-details'>The title of the page matches with the value :Contact Us | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/300691841.jpg" src="./../reports/images/300691841.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:12</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/840779128.jpg" src="./../reports/images/840779128.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:13</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/713238494.jpg" src="./../reports/images/713238494.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:13</td>
+<td class='step-details'>The element with link name: Site Map is clicked.<img class="report-img" data-featherlight="./../reports/images/257480889.jpg" src="./../reports/images/257480889.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:14</td>
+<td class='step-details'>The title of the page matches with the value :Site Map | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/261801415.jpg" src="./../reports/images/261801415.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:15</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/797720040.jpg" src="./../reports/images/797720040.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:17</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/231367374.jpg" src="./../reports/images/231367374.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:18</td>
+<td class='step-details'>The element with link name: View All Restaurant Locations is clicked.<img class="report-img" data-featherlight="./../reports/images/413365738.jpg" src="./../reports/images/413365738.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:18</td>
+<td class='step-details'>The title of the page matches with the value :All Locations | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/627194766.jpg" src="./../reports/images/627194766.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:19</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/266595311.jpg" src="./../reports/images/266595311.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:21</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/27643449.jpg" src="./../reports/images/27643449.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:22</td>
+<td class='step-details'>The element with link name: Careers is clicked.<img class="report-img" data-featherlight="./../reports/images/116871871.jpg" src="./../reports/images/116871871.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:47</td>
+<td class='step-details'>The title of the page matches with the value :Jobs at Pei Wei | Join our team of culinary professionals today! | Home<img class="report-img" data-featherlight="./../reports/images/848833404.jpg" src="./../reports/images/848833404.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:52</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/117112026.jpg" src="./../reports/images/117112026.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:53</td>
+<td class='step-details'>The element with link name: Pei Wei Local is clicked.<img class="report-img" data-featherlight="./../reports/images/360189217.jpg" src="./../reports/images/360189217.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:53</td>
+<td class='step-details'>The title of the page matches with the value :Pei Wei Local | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/253895366.jpg" src="./../reports/images/253895366.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:54</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/681079268.jpg" src="./../reports/images/681079268.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:56</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/890207234.jpg" src="./../reports/images/890207234.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:48:57</td>
+<td class='step-details'>The element with link name: Investors is clicked.<img class="report-img" data-featherlight="./../reports/images/387487420.jpg" src="./../reports/images/387487420.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:01</td>
+<td class='step-details'>The title of the page matches with the value :PFCB P.F. Chang's China Bistro Inc. - Investor Relations - Investors<img class="report-img" data-featherlight="./../reports/images/478788515.jpg" src="./../reports/images/478788515.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:07</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/696085553.jpg" src="./../reports/images/696085553.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:07</td>
+<td class='step-details'>The element with link name: Global Investment Opportunities is clicked.<img class="report-img" data-featherlight="./../reports/images/833228226.jpg" src="./../reports/images/833228226.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:13</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/47572941.jpg" src="./../reports/images/47572941.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:14</td>
+<td class='step-details'>The element with link name: Media is clicked.<img class="report-img" data-featherlight="./../reports/images/865251252.jpg" src="./../reports/images/865251252.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:14</td>
+<td class='step-details'>The title of the page matches with the value :Media | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/595101160.jpg" src="./../reports/images/595101160.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:15</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/375544906.jpg" src="./../reports/images/375544906.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:17</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/666245140.jpg" src="./../reports/images/666245140.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:18</td>
+<td class='step-details'>The element with link name: Privacy Policy is clicked.<img class="report-img" data-featherlight="./../reports/images/862357780.jpg" src="./../reports/images/862357780.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:18</td>
+<td class='step-details'>The title of the page matches with the value :Privacy Policy | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/804220859.jpg" src="./../reports/images/804220859.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:19</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/400229424.jpg" src="./../reports/images/400229424.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:22</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/896096632.jpg" src="./../reports/images/896096632.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:22</td>
+<td class='step-details'>The element with link name: Terms of Use is clicked.<img class="report-img" data-featherlight="./../reports/images/710509898.jpg" src="./../reports/images/710509898.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:22</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/584704310.jpg" src="./../reports/images/584704310.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:23</td>
+<td class='step-details'>The element : is clicked.<img class="report-img" data-featherlight="./../reports/images/876787646.jpg" src="./../reports/images/876787646.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>01:49:25</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/592443304.jpg" src="./../reports/images/592443304.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='40e3c244-3b8b-492d-bf3d-6906937c92eb'>
+<div class='test-head'>
+<span class='test-name'>RegUserRegularOrderMultipleQuantity </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 02:16:39</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 02:18:03</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 24s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:16:57</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/743555337.jpg" src="./../reports/images/743555337.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:16:58</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class="report-img" data-featherlight="./../reports/images/771169558.jpg" src="./../reports/images/771169558.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:16:59</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class="report-img" data-featherlight="./../reports/images/446448322.jpg" src="./../reports/images/446448322.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:16:59</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class="report-img" data-featherlight="./../reports/images/459106071.jpg" src="./../reports/images/459106071.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:16:59</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class="report-img" data-featherlight="./../reports/images/363416627.jpg" src="./../reports/images/363416627.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:17:28</td>
+<td class='step-details'>The element : MENU &amp; ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/395736411.jpg" src="./../reports/images/395736411.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:17:30</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 4.0 is clicked.<img class="report-img" data-featherlight="./../reports/images/596785844.jpg" src="./../reports/images/596785844.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:17:32</td>
+<td class='step-details'>The element : Honey Seared Wok-tossed crispy chicken in our signature honey-garlic sauce with red bell peppers, scallions and crispy rice noodles. is clicked.<img class="report-img" data-featherlight="./../reports/images/74385075.jpg" src="./../reports/images/74385075.jpg"></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>02:18:02</td>
+<td class='step-details'>The data: 1 could not be entered in the field :<img class="report-img" data-featherlight="./../reports/images/44898581.jpg" src="./../reports/images/44898581.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='2092df8f-241f-48ae-8b73-6c01e7a6fdbb'>
+<div class='test-head'>
+<span class='test-name'>RegUserRegularOrderMultipleQuantity </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 02:18:37</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 02:19:02</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 25s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:18:49</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/468856466.jpg" src="./../reports/images/468856466.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:18:49</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/482750799.jpg" src="./../reports/images/482750799.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:18:50</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class="report-img" data-featherlight="./../reports/images/536406198.jpg" src="./../reports/images/536406198.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:18:50</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class="report-img" data-featherlight="./../reports/images/578270388.jpg" src="./../reports/images/578270388.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:18:51</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class="report-img" data-featherlight="./../reports/images/900324442.jpg" src="./../reports/images/900324442.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:18:51</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class="report-img" data-featherlight="./../reports/images/733404627.jpg" src="./../reports/images/733404627.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:18:57</td>
+<td class='step-details'>The element : MENU &amp; ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/795620982.jpg" src="./../reports/images/795620982.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:18:59</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 4.0 is clicked.<img class="report-img" data-featherlight="./../reports/images/308927807.jpg" src="./../reports/images/308927807.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:19:00</td>
+<td class='step-details'>The element : Honey Seared Wok-tossed crispy chicken in our signature honey-garlic sauce with red bell peppers, scallions and crispy rice noodles. is clicked.<img class="report-img" data-featherlight="./../reports/images/753683697.jpg" src="./../reports/images/753683697.jpg"></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>02:19:01</td>
+<td class='step-details'>The data: 1 could not be entered in the field :quantity<img class="report-img" data-featherlight="./../reports/images/577973648.jpg" src="./../reports/images/577973648.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='51a237f5-ccb8-404e-b474-9bd9e7f185f6'>
+<div class='test-head'>
+<span class='test-name'>RegUserRegularOrderMultipleQuantity </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 02:20:31</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 02:20:53</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 22s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:20:40</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/43982071.jpg" src="./../reports/images/43982071.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:20:40</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/444168146.jpg" src="./../reports/images/444168146.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:20:41</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class="report-img" data-featherlight="./../reports/images/707556745.jpg" src="./../reports/images/707556745.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:20:42</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class="report-img" data-featherlight="./../reports/images/492668997.jpg" src="./../reports/images/492668997.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:20:42</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class="report-img" data-featherlight="./../reports/images/394234746.jpg" src="./../reports/images/394234746.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:20:42</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class="report-img" data-featherlight="./../reports/images/470624935.jpg" src="./../reports/images/470624935.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:20:49</td>
+<td class='step-details'>The element : MENU &amp; ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/207118773.jpg" src="./../reports/images/207118773.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:20:51</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 4.0 is clicked.<img class="report-img" data-featherlight="./../reports/images/156098724.jpg" src="./../reports/images/156098724.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:20:52</td>
+<td class='step-details'>The element : Honey Seared Wok-tossed crispy chicken in our signature honey-garlic sauce with red bell peppers, scallions and crispy rice noodles. is clicked.<img class="report-img" data-featherlight="./../reports/images/98010615.jpg" src="./../reports/images/98010615.jpg"></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>02:20:52</td>
+<td class='step-details'>The data: 1 could not be entered in the field :quantity<img class="report-img" data-featherlight="./../reports/images/737686852.jpg" src="./../reports/images/737686852.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='96c1c58f-519a-4313-b55d-fa308c7a049e'>
+<div class='test-head'>
+<span class='test-name'>RegUserRegularOrderMultipleQuantity </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 02:23:21</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 02:23:45</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 24s+0ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:23:30</td>
+<td class='step-details'>The browser:chrome launched successfully<img class="report-img" data-featherlight="./../reports/images/382840714.jpg" src="./../reports/images/382840714.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:23:30</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class="report-img" data-featherlight="./../reports/images/817840526.jpg" src="./../reports/images/817840526.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:23:31</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class="report-img" data-featherlight="./../reports/images/398088141.jpg" src="./../reports/images/398088141.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:23:32</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class="report-img" data-featherlight="./../reports/images/164041695.jpg" src="./../reports/images/164041695.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:23:32</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class="report-img" data-featherlight="./../reports/images/212176017.jpg" src="./../reports/images/212176017.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:23:32</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class="report-img" data-featherlight="./../reports/images/107928950.jpg" src="./../reports/images/107928950.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:23:38</td>
+<td class='step-details'>The element : MENU &amp; ORDER is clicked.<img class="report-img" data-featherlight="./../reports/images/118549500.jpg" src="./../reports/images/118549500.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:23:41</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 4.0 is clicked.<img class="report-img" data-featherlight="./../reports/images/462182448.jpg" src="./../reports/images/462182448.jpg"></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:23:43</td>
+<td class='step-details'>The element : Honey Seared Wok-tossed crispy chicken in our signature honey-garlic sauce with red bell peppers, scallions and crispy rice noodles. is clicked.<img class="report-img" data-featherlight="./../reports/images/516561870.jpg" src="./../reports/images/516561870.jpg"></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>02:23:45</td>
+<td class='step-details'>The data: 1 could not be entered in the field :quantity<img class="report-img" data-featherlight="./../reports/images/289565377.jpg" src="./../reports/images/289565377.jpg"></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='6c15251e-d2ca-4b8f-b943-6f4081f14750'>
+<div class='test-head'>
+<span class='test-name'>RegUserPartyOrderPayAtRestaurant </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-02-13 02:40:36</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-02-13 02:41:01</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 24s+782ms</span>
+</div>
+<div class='test-desc'>User Logging in using POM</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:40:45</td>
+<td class='step-details'>The browser:chrome launched successfully<img class='report-img' data-featherlight='./../reports/images/471358209.jpg' src='./../reports/images/471358209.jpg' /></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:40:45</td>
+<td class='step-details'>The title of the page matches with the value :Home | Pei Wei Asian Diner<img class='report-img' data-featherlight='./../reports/images/513002350.jpg' src='./../reports/images/513002350.jpg' /></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:40:46</td>
+<td class='step-details'>The element with link name: Log In is clicked.<img class='report-img' data-featherlight='./../reports/images/810229360.jpg' src='./../reports/images/810229360.jpg' /></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:40:47</td>
+<td class='step-details'>The data: sudharsan.kg@saggezza.com entered successfully in field :o-security-username<img class='report-img' data-featherlight='./../reports/images/133070690.jpg' src='./../reports/images/133070690.jpg' /></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:40:47</td>
+<td class='step-details'>The data: qwerty123 entered successfully in field :o-security-password<img class='report-img' data-featherlight='./../reports/images/373634939.jpg' src='./../reports/images/373634939.jpg' /></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:40:47</td>
+<td class='step-details'>The element : SUBMIT is clicked.<img class='report-img' data-featherlight='./../reports/images/38445048.jpg' src='./../reports/images/38445048.jpg' /></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:40:53</td>
+<td class='step-details'>The element : MENU & ORDER is clicked.<img class='report-img' data-featherlight='./../reports/images/751381325.jpg' src='./../reports/images/751381325.jpg' /></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:40:56</td>
+<td class='step-details'>The element with link name: Party Menu is clicked.<img class='report-img' data-featherlight='./../reports/images/298177758.jpg' src='./../reports/images/298177758.jpg' /></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:40:57</td>
+<td class='step-details'>The element : RICE AND NOODLE BOWLS* 
+4.0 is clicked.<img class='report-img' data-featherlight='./../reports/images/741228068.jpg' src='./../reports/images/741228068.jpg' /></td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>02:40:58</td>
+<td class='step-details'>The element : Party Menu Mongolian 
+Party Menu Mongolian is clicked.<img class='report-img' data-featherlight='./../reports/images/84993978.jpg' src='./../reports/images/84993978.jpg' /></td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>02:41:01</td>
+<td class='step-details'>The data: 1 could not be entered in the field :null<img class='report-img' data-featherlight='./../reports/images/44300428.jpg' src='./../reports/images/44300428.jpg' /></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id='test-details-wrapper' class='col _addedCell2'>
+<div class='contents'>
+<div class='card-panel details-view'>
+<h5 class='details-name'></h5>
+<div class='details-container'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /tests -->
+
+<!-- categories -->
+<!-- /categories -->
+
+<!-- exceptions -->
+<!-- /exceptions -->
+
+<!-- testrunner logs -->
+<!-- /testrunner logs -->
+
+</div>
+<!-- /container -->
+
+<!-- test dashboard counts setting -->
+<div id='test-count-setting' class='modal bottom-sheet'> 
+<div class='modal-content'> 
+<h5>Configure Tests Count Setting</h5> 
+<input name='test-count-setting' type='radio' id='parentWithoutNodes' class='with-gap'> 
+<label for='parentWithoutNodes'>Parent Tests Only (Does not include child nodes in counts)</label> 
+<br> 
+<input name='test-count-setting' type='radio' id='parentWithoutNodesAndNodes' class='with-gap'> 
+<label for='parentWithoutNodesAndNodes'>Parent Tests Without Child Tests + Child Tests</label> 
+<br> 
+<input name='test-count-setting' type='radio' id='childNodes' class='with-gap'> 
+<label for='childNodes'>Child Tests Only</label> 
+</div> 
+<div class='modal-footer'> 
+<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+</div> 
+</div>
+<!-- /test dashboard counts setting -->
+
+<!-- filter for step status -->
+<div id='step-status-filter' class='modal bottom-sheet'> 
+<div class='modal-content'> 
+<h5>Select status</h5> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-pass'> 
+<label for='step-dashboard-filter-pass'>Pass</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fail'> 
+<label for='step-dashboard-filter-fail'>Fail</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fatal'> 
+<label for='step-dashboard-filter-fatal'>Fatal</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-error'> 
+<label for='step-dashboard-filter-error'>Error</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-warning'> 
+<label for='step-dashboard-filter-warning'>Warning</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-skip'> 
+<label for='step-dashboard-filter-skip'>Skipped</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-info'> 
+<label for='step-dashboard-filter-info'>Info</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-unknown'> 
+<label for='step-dashboard-filter-unknown'>Unknown</label> 
+</div>
+<div class='modal-footer'> 
+<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+</div> 
+</div>
+<!-- /filter for step status -->
+
+<script src='https://cdn.rawgit.com/anshooarora/extentreports/c936a26fc8bb9c5fc0253b5bc6f289e1d14bb595/cdn/extent.js' type='text/javascript'></script>
+
+<script>$(document).ready(function() { $('.logo span').html('ExtentReports'); });</script>
+<script>
+
+      
+        $(document).ready(function() {
+          
+        });
+      
+    
+</script>
+</body>
+</html>

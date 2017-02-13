@@ -81,4 +81,12 @@ public class Extras extends PeiweiWrappers {
 
 		}
 	
+	public Extras getTotal() {
+		getTextByXpath(prop.getProperty("Extras.Total4.XPath"));
+		return new Extras();	
+		
+	}
+	
+	
+	
 }

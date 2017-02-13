@@ -28,6 +28,12 @@ public class OrderConfirmation extends PeiweiWrappers {
 
 }
 	
+    public OrderConfirmation getTotal() {
+		getTextByXpath(prop.getProperty("OrderConfirmation.Total.XPath"));
+		return this;	
+		
+	}
+    
 	public Gmail InvokeGmail1() throws InterruptedException {
 		/*System.setProperty("webdriver.chrome.driver", "C://Users/Murugeshwari/Downloads/chromedriver.exe");
 	     WebDriver driver = new ChromeDriver();

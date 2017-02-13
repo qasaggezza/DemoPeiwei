@@ -72,9 +72,9 @@ import utils.Reporter;
 			return this;
 		}
 		
-		public MenuAndOrd clickMenuAndOrd() {
+		public MenuAndOrder clickMenuAndOrd() {
 			clickByXpath(prop.getProperty("Home.MenuAndOrd.Xpath"));
-			return new MenuAndOrd();
+			return new MenuAndOrder();
 			
 			}
 		
@@ -122,55 +122,55 @@ import utils.Reporter;
 		}
 		
 		public Contactus clickContactus() throws InterruptedException {
-			clickByXpath(prop.getProperty("Home.Contactus.Xpath"));
+			clickByLink(prop.getProperty("Home.Contactus.linktext"));
 			//Thread.sleep(5000);
 			return new Contactus();
 		}
 		public Sitemap clickSitemap() throws InterruptedException {
-			clickByXpath(prop.getProperty("Home.Sitemap.Xpath"));
+			clickByLink(prop.getProperty("Home.Sitemap.linktext"));
 			//Thread.sleep(5000);
 			return new Sitemap();
 		}
-		public AllLoc clickAllloc() throws InterruptedException {
-			clickByXpath(prop.getProperty("Home.Allloc.Xpath"));
+		public AllLocations clickAllloc() throws InterruptedException {
+			clickByLink(prop.getProperty("Home.Allloc.linktext"));
 			//Thread.sleep(5000);
-			return new AllLoc();
+			return new AllLocations();
 		}
 		public Careers clickCareers() throws InterruptedException {
-			clickByXpath(prop.getProperty("Home.Careers.Xpath"));
+			clickByLink(prop.getProperty("Home.Careers.linktext"));
 			switchToLastWindow();
 			//Thread.sleep(5000);
 			return new Careers();
 		}
 		public PeiweiLocal clickPeiweilocal() throws InterruptedException {
-			clickByXpath(prop.getProperty("Home.Peiweilocal.Xpath"));
+			clickByLink(prop.getProperty("Home.Peiweilocal.linktext"));
 			//Thread.sleep(5000);
 			return new PeiweiLocal();
 		}
 		public Investors clickInvestors() throws InterruptedException {
-			clickByXpath(prop.getProperty("Home.Investors.Xpath"));
+			clickByLink(prop.getProperty("Home.Investors.linktext"));
 			switchToLastWindow();
 			//Thread.sleep(5000);
 			return new Investors();
 		}
 		public Media clickMedia() throws InterruptedException {
-			clickByXpath(prop.getProperty("Home.Media.Xpath"));
+			clickByLink(prop.getProperty("Home.Media.linktext"));
 			//Thread.sleep(5000);
 			return new Media();
 		}
 		public PrivacyPolicy clickPrivacy() throws InterruptedException {
-			clickByXpath(prop.getProperty("Home.Privacy.Xpath"));
+			clickByLink(prop.getProperty("Home.Privacy.linktext"));
 			//Thread.sleep(5000);
 			return new PrivacyPolicy();
 		}
 		public Terms clickTerms() throws InterruptedException {
-			clickByXpath(prop.getProperty("Home.Terms.Xpath"));
+			clickByLink(prop.getProperty("Home.Terms.linktext"));
 			//Thread.sleep(5000);
 			return new Terms();
 		}
 	
 		public GlobalInvestments clickGlobalInvestments() throws InterruptedException {
-			clickByXpath(prop.getProperty("Home.GlobalInvestments.Xpath"));
+			clickByLink(prop.getProperty("Home.GlobalInvestments.linktext"));
 			//Thread.sleep(5000);
 			return new GlobalInvestments();
 		}

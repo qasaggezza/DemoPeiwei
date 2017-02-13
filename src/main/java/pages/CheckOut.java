@@ -80,5 +80,17 @@ public class CheckOut extends PeiweiWrappers {
 		return new PaymentGateway();	
 		
 	}
+
+	public CheckOut getTotal1() {
+		getTextByXpath(prop.getProperty("CheckOut.Total.XPath"));
+		return this;	
+		
+	}
+	
+	public CheckOut getTotal2() {
+		getTextByXpath(prop.getProperty("CheckOut.Total1.XPath"));
+		return this;	
+		
+	}
 	
 }

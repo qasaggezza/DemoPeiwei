@@ -5,9 +5,9 @@ import wrappers.PeiweiWrappers;
 public class P2labs extends PeiweiWrappers {
 
 	
-	public MenuAndOrd clickMenuAndOrd() {
+	public MenuAndOrder clickMenuAndOrd() {
 		clickByXpath(prop.getProperty("P2labs.MenuAndOrd.Xpath"));
-		return new MenuAndOrd();
+		return new MenuAndOrder();
 		
 		}
 }

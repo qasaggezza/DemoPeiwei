@@ -50,7 +50,7 @@ public class PeiweiWrappers extends GenericWrappers {
 	
 	@AfterMethod
 	public void afterMethod(){
-		quitBrowser();
+		//quitBrowser();
 	}
 	
 	@DataProvider(name="fetchData")

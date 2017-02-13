@@ -204,7 +204,7 @@ public class GenericWrappers {
 		{
 			driver.findElementByXPath(xpath);
 			String sText = driver.findElementByXPath(xpath).getText();
-			System.out.println(sText);
+			
 			if (driver.findElementByXPath(xpath).getText().trim().contains(text)){
 				Reporter.reportStep("The text: "+sText+" contains the value :"+text, "PASS");
 				
@@ -214,10 +214,10 @@ public class GenericWrappers {
 			}
 			bReturn = true;
 		} catch (NoSuchElementException e) {
-			System.out.println("There is no Element by Xpath: " + xpath);
+			
 			Reporter.reportStep("The text not found :"+text, "FAIL");
 		} catch (WebDriverException e) {
-			System.out.println("The Browser could not be found");
+			
 		} 
 		return bReturn;
 	}
@@ -377,6 +377,7 @@ public class GenericWrappers {
 		String bReturn = "";
 		try{
 			getTxt =  driver.findElement(By.xpath(xpathVal)).getText();
+			System.out.println(getTxt);
 		} catch (Exception e) {
 			Reporter.reportStep("The element with xpath: "+xpathVal+" could not be found.", "FAIL");
 		}

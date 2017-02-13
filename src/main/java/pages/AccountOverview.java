@@ -13,7 +13,7 @@ public class AccountOverview extends PeiweiWrappers {
 	
 	public AccountOverview clickLogout() throws InterruptedException {
 	//	Thread.sleep(5000);
-		clickByXpath(prop.getProperty("AccountOverview.LogOut.XPath"));
+		clickByLink(prop.getProperty("AccountOverview.LogOut.linktext"));
 		return this;
 		
 		
@@ -26,9 +26,9 @@ public class AccountOverview extends PeiweiWrappers {
 		
 		}
 
-	public MenuAndOrd clickMenuAndOrder() {
+	public MenuAndOrder clickMenuAndOrder() {
 		clickByXpath(prop.getProperty("AccountOverview.MenuAndOrder.XPath"));
-		return new MenuAndOrd();
+		return new MenuAndOrder();
 		
 		}
 	
