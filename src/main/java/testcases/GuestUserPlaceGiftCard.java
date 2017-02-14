@@ -9,21 +9,21 @@ import wrappers.PeiweiWrappers;
 
 import org.testng.annotations.BeforeClass;
 
-public class RegUserAddGiftCard extends PeiweiWrappers{
+//This testcase is to check whether a Guest user is able to place a Gift card order with specified Shipping Address and Card amount
+//and pay using the credit card. Also check for the confirmation mail from the Restaurant.
+
+public class GuestUserPlaceGiftCard extends PeiweiWrappers{
 @Test(dataProvider="fetchData")
-public void login(String emailadd,String pwd,String cval,String quantity,String to,String msg,String fname,String lname,String phone, String addr1, String addr2, String city, String State, String Zip, String Shipmode, String mail,String cname,String cnum,String exdate,String Emailaddr, String Password, String txt) throws InterruptedException {
+public void login(String cval,String quantity,String to,String from,String msg,String fname,String lname,String phone, String addr1, String addr2, String city, String State, String Zip, String Shipmode, String mail,String cname,String cnum,String exdate,String Emailaddr, String Password, String txt) throws InterruptedException {
 
 	new HomePage()
-	.clickLogin()
-	.enterEmailaddresslogin(emailadd)
-	.enterPassword(pwd)
-	.clickSubmit()
     .clickGiftcard()
     .clickOrdercard()
     .selectCardValue(cval)
 	.enterQty(quantity)
 	.clicknext()
 	.enterTo(to)
+	.enterFrom(from)
 	.enterMessage(msg)
 	.clickPreview()
 	.clickAddOrder()
@@ -55,10 +55,10 @@ public void login(String emailadd,String pwd,String cval,String quantity,String 
 	}
 @BeforeClass
 public void beforeClass() {
-dataSheetName="PW017";
+dataSheetName="GuestUserPlaceGiftCard";
 browserName="chrome";
-testCaseName="RegUserAddGiftCard";
-testDescription="User Logging in using POM";
+testCaseName="GuestUserPlaceGiftCard";
+testDescription="Check whether a Guest user is able to place a Gift card order";
 }
 
 }

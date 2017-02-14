@@ -9,7 +9,10 @@ import wrappers.PeiweiWrappers;
 import wrappers.GenericWrappers;
 import org.testng.annotations.BeforeClass;
 
-public class RegUserRegularOrderPayAtRestaurant extends PeiweiWrappers{
+//This testcase is to check whether a Registered user is able to place a Regular order with in $250
+//using pay at restaurant option. Also check for the confirmation mail from the Restaurant.
+
+public class RegisteredUserRegularOrderPayAtRestaurant extends PeiweiWrappers{
 @Test(dataProvider="fetchData")
 public void login(String emailadd,String pwd,String num,String rice, String qua,String date,String time,String month,String Emailaddr,String Password,String txt) throws InterruptedException {
 
@@ -49,10 +52,10 @@ public void login(String emailadd,String pwd,String num,String rice, String qua,
 	}
 @BeforeClass
 public void beforeClass() {
-dataSheetName="PW004";
+dataSheetName="RegisteredUserRegularOrderPayAtRestaurant";
 browserName="chrome";
-testCaseName="RegUserRegularOrderPayAtRestaurant";
-testDescription="User Logging in using POM";
+testCaseName="RegisteredUserRegularOrderPayAtRestaurant";
+testDescription="Check whether a registered user is able to place a regular order and Pay at Restaurant";
 }
 
 }

@@ -9,7 +9,7 @@ public class Instagram extends PeiweiWrappers {
 			//Reporter.reportStep("This is not Home Page", "FAIL");
 	}
 	public HomePage switchback() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		switchToParentWindow();
 		return new HomePage();
 		

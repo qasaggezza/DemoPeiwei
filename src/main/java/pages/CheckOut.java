@@ -12,7 +12,7 @@ public class CheckOut extends PeiweiWrappers {
 	}
 	
 	public CheckOut clickCalendar(String data) {
-		enterByXpath(prop.getProperty("CheckOut.Calendar.Xpath"), data);
+		enterByName(prop.getProperty("CheckOut.Calendar.name"), data);
 		return this;	
 		
 	}
@@ -36,24 +36,24 @@ public class CheckOut extends PeiweiWrappers {
 	}
 	
 	public CheckOut clickPayOnline() {
-		clickByXpath(prop.getProperty("CheckOut.PayOnline.Xpath"));
+		clickById(prop.getProperty("CheckOut.PayOnline.id"));
 		return this;	
 		
 	}
 	
 	
 	public CheckOut enterFname(String data) {
-		enterByXpath(prop.getProperty("CheckOut.Fname.Xpath"), data);
+		enterByName(prop.getProperty("CheckOut.Fname.name"), data);
 		return this;	
 		
 	}
 	public CheckOut enterLname(String data) {
-		enterByXpath(prop.getProperty("CheckOut.Lname.Xpath"), data);
+		enterByName(prop.getProperty("CheckOut.Lname.name"), data);
 		return this;	
 		
 	}
 	public CheckOut enterEmail(String data) {
-		enterByXpath(prop.getProperty("CheckOut.Email.Xpath"), data);
+		enterByName(prop.getProperty("CheckOut.Email.name"), data);
 		return this;	
 		
 	}
@@ -63,7 +63,7 @@ public class CheckOut extends PeiweiWrappers {
 		
 	}
 	public CheckOut enterZipCode(String data) {
-		enterByXpath(prop.getProperty("CheckOut.ZipCode.Xpath"), data);
+		enterByName(prop.getProperty("CheckOut.ZipCode.name"), data);
 		return this;	
 		
 	}

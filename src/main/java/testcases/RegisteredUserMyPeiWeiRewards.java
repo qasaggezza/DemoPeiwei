@@ -9,7 +9,9 @@ import wrappers.PeiweiWrappers;
 
 import org.testng.annotations.BeforeClass;
 
-public class RegUserMyPeiWeiRewards extends PeiweiWrappers{
+// This testcase is to check whether a user is able to validate MyPeiweiRewards page.
+
+public class RegisteredUserMyPeiWeiRewards extends PeiweiWrappers{
 @Test(dataProvider="fetchData")
 public void login(String emailadd,String pwd) throws InterruptedException {
 
@@ -28,10 +30,10 @@ public void login(String emailadd,String pwd) throws InterruptedException {
 		}
 	@BeforeClass
 	public void beforeClass() {
-	dataSheetName="PW018";
+	dataSheetName="RegisteredUserMyPeiWeiRewards";
 	browserName="chrome";
-	testCaseName="RegUserMyPeiWeiRewards";
-	testDescription="User Logging in using POM";
+	testCaseName="RegisteredUserMyPeiWeiRewards";
+	testDescription="Check whether the Registered User is able to validate MyPeiweiRewards page";
 	}
 
 }

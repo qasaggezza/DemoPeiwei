@@ -7,7 +7,10 @@ import wrappers.PeiweiWrappers;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class ValidateAddFavorite extends PeiweiWrappers{
+//This testcase is to check whether a Registered user is able to place an order under Favourite's section
+// using pay at Restaurant option. Also check for the confirmation mail from the Restaurant.
+
+public class ValidateAddMyFavorite extends PeiweiWrappers{
 	@Test(dataProvider="fetchData")
 public void login(String emailadd,String pwd,String date,String time,String dat,String Emailaddr, String Password,String verifytext) throws InterruptedException {
 
@@ -38,9 +41,9 @@ public void login(String emailadd,String pwd,String date,String time,String dat,
 	
 	@BeforeClass
 	public void beforeClass() {
-	dataSheetName="PW020";
+	dataSheetName="ValidateAddMyFavorite";
 	browserName="chrome";
-	testCaseName="ValidateAddFavorite";
-	testDescription="ValidateAddFavorite using POM";
+	testCaseName="ValidateAddMyFavorite";
+	testDescription="Check whether the Registered User is able to place an order under Favourite's section";
 	}
 }

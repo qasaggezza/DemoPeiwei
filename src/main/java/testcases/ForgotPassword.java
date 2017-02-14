@@ -10,7 +10,11 @@ package testcases;
 
     import org.testng.annotations.BeforeClass;
 
-    public class ForgotPwd extends PeiweiWrappers{
+    //This testcase is to check if forgot password link on login screen works as expected. On clicking forgot password link, 
+    //user should be able to reset the password and should be able to login with the newly changed password. 
+    
+    
+    public class ForgotPassword extends PeiweiWrappers{
     @Test(dataProvider="fetchData")
     public void login(String emailadd,String Emailaddr, String Password,String pass1, String pass2) throws InterruptedException {
 
@@ -37,10 +41,10 @@ package testcases;
          	}
     @BeforeClass
     public void beforeClass() {
-    dataSheetName="PW003";
+    dataSheetName="ForgotPassword";
     browserName="chrome";
-    testCaseName="ForgotPwd";
-    testDescription="User Logging in using POM";
+    testCaseName="ForgotPassword";
+    testDescription="Verify Forgot Password Functionality";
     }
 
     }

@@ -10,7 +10,7 @@ public class AllLocations extends PeiweiWrappers {
 	
 	public HomePage clickLogo() throws InterruptedException {
 		clickByXpath(prop.getProperty("Home.Logo.Xpath"));
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		return new HomePage();
 	}
 

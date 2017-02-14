@@ -19,7 +19,7 @@ public class Gmail extends PeiweiWrappers{
 	
 	public Gmail enterNext() throws InterruptedException {
 		clickById(prop.getProperty("Gmail.Next.id"));
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		return this;
 	}
 

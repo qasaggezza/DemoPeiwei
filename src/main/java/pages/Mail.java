@@ -6,11 +6,11 @@ import wrappers.PeiweiWrappers;
 public class Mail extends PeiweiWrappers{
 
 	
-	public ResetPwd clickLink() throws InterruptedException {
+	public ResetPassword clickLink() throws InterruptedException {
 		clickByXpath(prop.getProperty("Gmail.RefLink.Xpath"));
 		switchToLastWindow();
 		//Thread.sleep(10000);
-		return new ResetPwd();
+		return new ResetPassword();
 	}
 	
 	public Mail verifyText(String data) {

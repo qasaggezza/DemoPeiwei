@@ -17,7 +17,7 @@ public class AddCard extends PeiweiWrappers {
 	}
 	
 	public AddCard enterQty(String data )  {
-		enterByXpath(prop.getProperty("Addcard.CardQty.Xpath"), data);
+		enterById(prop.getProperty("Addcard.CardQty.id"), data);
 		return this;
 			
 	}

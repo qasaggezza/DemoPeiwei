@@ -11,7 +11,10 @@ import wrappers.PeiweiWrappers;
 
 import org.testng.annotations.BeforeClass;
 
-public class Register_NonLoyalUser extends PeiweiWrappers{
+//This testcase is to check whether a user is able to register successfully as a Non-Loyal user.
+//Also check for the welcome mail from the Restaurant.
+
+public class RegisterNonLoyalUser extends PeiweiWrappers{
 	@Test(dataProvider="fetchData")
 	public void login(String emailaddress,String passWord,String fname,String lname,String phone,String zipcode,String Emailaddr, String Password, String msg) throws InterruptedException {
 
@@ -38,10 +41,10 @@ public class Register_NonLoyalUser extends PeiweiWrappers{
 	}
 	@BeforeClass
 	public void beforeClass() {
-		dataSheetName="PW002";
+		dataSheetName="RegisterNonLoyalUser";
 		browserName="chrome";
-		testCaseName="Register Non-Loyal User";
-		testDescription="User Registration using POM";
+		testCaseName="RegisterNonLoyalUser";
+		testDescription="Check whether a user is able to successfully register as a loyal customer";
 	}
 
 }

@@ -10,7 +10,7 @@ public class FB extends PeiweiWrappers {
 	}
 	
 	public HomePage switchback() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		switchToParentWindow();
 		return new HomePage();
 		

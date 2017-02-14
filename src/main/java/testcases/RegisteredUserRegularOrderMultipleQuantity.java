@@ -9,7 +9,10 @@ import wrappers.PeiweiWrappers;
 import wrappers.GenericWrappers;
 import org.testng.annotations.BeforeClass;
 
-public class RegUserRegularOrderMultipleQuantity extends PeiweiWrappers{
+//This testcase is to check whether a Registered user is able to place a order for multiple menus
+//and pay using the Pay at Restaurant option. Also check for the confirmation mail from the Restaurant.
+
+public class RegisteredUserRegularOrderMultipleQuantity extends PeiweiWrappers{
 @Test(dataProvider="fetchData")
 public void login(String emailadd,String pwd,String num,String num1,String num2,String rice, String qua,String date,String time,String month,String Emailaddr,String Password,String txt) throws InterruptedException {
 
@@ -67,10 +70,10 @@ public void login(String emailadd,String pwd,String num,String num1,String num2,
 	}
 @BeforeClass
 public void beforeClass() {
-dataSheetName="PW021";
+dataSheetName="RegisteredUserRegularOrderMultipleQuantity";
 browserName="chrome";
-testCaseName="RegUserRegularOrderMultipleQuantity";
-testDescription="User Logging in using POM";
+testCaseName="RegisteredUserRegularOrderMultipleQuantity";
+testDescription="Check whether the Registered User is able to place order for multiple menus";
 }
 
 }

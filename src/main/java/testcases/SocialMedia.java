@@ -9,6 +9,8 @@ import wrappers.PeiweiWrappers;
 
 import org.testng.annotations.BeforeClass;
 
+//This testcase is to check whether a user is able to click and navigate to the social media icons available.
+
 public class SocialMedia extends PeiweiWrappers{
 @Test
 public void login() throws InterruptedException {
@@ -29,10 +31,9 @@ public void login() throws InterruptedException {
 	}
 @BeforeClass
 public void beforeClass() {
-//dataSheetName="PW003";
 browserName="chrome";
 testCaseName="SocialMedia";
-testDescription="User Logging in using POM";
+testDescription="Check whether the user is able to click and navigate to the social media icons available.";
 }
 
 }

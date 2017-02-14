@@ -9,12 +9,12 @@ public class CardCheckout extends PeiweiWrappers {
 			//Reporter.reportStep("This is not Home Page", "FAIL");
 	}
 	public CardCheckout enterFname(String data) {
-		enterByXpath(prop.getProperty("CardCheckout.Fname.Xpath"), data);
+		enterByName(prop.getProperty("CardCheckout.Fname.name"), data);
 		return this;	
 		
 	}
 	public CardCheckout enterLname(String data) {
-		enterByXpath(prop.getProperty("CardCheckout.Lname.Xpath"), data);
+		enterByName(prop.getProperty("CardCheckout.Lname.name"), data);
 		return this;	
 		
 	}
@@ -26,19 +26,19 @@ public class CardCheckout extends PeiweiWrappers {
 	}
 	
 	public CardCheckout enterAddr1(String data) {
-		enterByXpath(prop.getProperty("CardCheckout.Addr1.Xpath"), data);
+		enterByName(prop.getProperty("CardCheckout.Addr1.name"), data);
 		return this;	
 		
 	}
 	
 	public CardCheckout enterAddr2(String data) {
-		enterByXpath(prop.getProperty("CardCheckout.Addr2.Xpath"), data);
+		enterByName(prop.getProperty("CardCheckout.Addr2.name"), data);
 		return this;	
 		
 	}
 	
 	public CardCheckout enterCity(String data) {
-		enterByXpath(prop.getProperty("CardCheckout.City.Xpath"), data);
+		enterByName(prop.getProperty("CardCheckout.City.name"), data);
 		return this;	
 		
 	}
@@ -48,7 +48,7 @@ public class CardCheckout extends PeiweiWrappers {
 		
 	}
 	public CardCheckout enterZipCode(String data) {
-		enterByXpath(prop.getProperty("CardCheckout.Zip.Xpath"), data);
+		enterByName(prop.getProperty("CardCheckout.Zip.name"), data);
 		return this;	
 		
 	}
@@ -61,7 +61,7 @@ public class CardCheckout extends PeiweiWrappers {
 	
 	
 	public CardCheckout enterEmail(String data) {
-		enterByXpath(prop.getProperty("CardCheckout.Email.Xpath"), data);
+		enterByName(prop.getProperty("CardCheckout.Email.name"), data);
 		return this;	
 		
 	}

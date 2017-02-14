@@ -38,14 +38,14 @@ public class Extras extends PeiweiWrappers {
 		
 	}
 	
-	public Extras enterChocoChip(String data) {
-		enterByXpath(prop.getProperty("Extras.ChocolateChipCookieQuantity.XPath"), data);
+	public Extras enterNoodlesQuan(String data) {
+		enterByXpath(prop.getProperty("Extras.NoodlesQuantity.XPath"), data);
 		return this;	
 		
 	}
 	
-	public Extras enterSteamedVeg(String data) {
-		enterByXpath(prop.getProperty("Extras.SteamedVegetableQuantity.XPath"), data);
+	public Extras enterSauceQuan(String data) {
+		enterByXpath(prop.getProperty("Extras.SauceQuantity.XPath"), data);
 		return this;	
 		
 	}
@@ -56,14 +56,14 @@ public class Extras extends PeiweiWrappers {
 		
 	}
 	
-	public Extras clickChocoAddToOrder() {
-		clickByXpath(prop.getProperty("Extras.ChocolateChipCookieAddToOrder.XPath"));
+	public Extras clickNoodlesAddToOrder() {
+		clickByXpath(prop.getProperty("Extras.NoodlesAddToOrder.XPath"));
 		return this;	
 		
 	}
 	
-	public Extras clickSteamedVegAddToOrder() {
-		clickByXpath(prop.getProperty("Extras.SteamedVegetableAddToOrder.XPath"));
+	public Extras clickSauceAddToOrder() {
+		clickByXpath(prop.getProperty("Extras.SauceAddToOrder.XPath"));
 		return this;	
 		
 	}

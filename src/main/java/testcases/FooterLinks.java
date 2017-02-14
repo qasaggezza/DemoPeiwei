@@ -9,6 +9,8 @@ import wrappers.PeiweiWrappers;
 
 import org.testng.annotations.BeforeClass;
 
+//To check whether we are able to click and navigate to the corresponding Footers.
+
 public class FooterLinks extends PeiweiWrappers{
 @Test
 public void login() throws InterruptedException {
@@ -37,10 +39,10 @@ public void login() throws InterruptedException {
 	}
 @BeforeClass
 public void beforeClass() {
-//dataSheetName="PW003";
+
 browserName="chrome";
 testCaseName="FooterLinks";
-testDescription="User Logging in using POM";
+testDescription="Check Footer Links";
 }
 
 }
