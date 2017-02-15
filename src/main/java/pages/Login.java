@@ -12,22 +12,22 @@ public class Login extends PeiweiWrappers{
 	}
 	
 	public Login enterEmailaddresslogin(String data) {
-		enterById(prop.getProperty("Login.emailaddress.id"), data);
+		enterById(prop.getProperty("Login.Emailaddress.Id"), data);
 		return this;
 	}
 
 	public Login enterPassword(String data) {
-		enterById(prop.getProperty("Login.password.id"), data);
+		enterById(prop.getProperty("Login.Password.Id"), data);
 		return this;
 	}
 	
 	public Login clickForgotPwd() {
-		clickByLink(prop.getProperty("Login.forgotpassword.linktext"));
+		clickByLink(prop.getProperty("Login.Forgotpassword.Linktext"));
 		return this;
 	}
 	
 	public HomePage clickSubmit() throws InterruptedException {
-		clickByXpath(prop.getProperty("Login.submit.XPath"));
+		clickByXpath(prop.getProperty("Login.Submit.Xpath"));
 		return new HomePage();
 	}
 	

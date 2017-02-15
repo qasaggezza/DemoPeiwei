@@ -20,26 +20,30 @@ public void login(String emailadd,String pwd,String num,String num1,String quant
 	.enterEmailaddresslogin(emailadd)
 	.enterPassword(pwd)
 	.clickSubmit()
+	.verifyMailId(emailadd)              //Verify EmailId
 	.clickMenuAndOrder()
 	.clickRiceAndNoodle()
-	.clickSesame()
+	.clickJapeneseSteak()
 	.enterQuantity(num)
-	.clickSize1()
-	.clickIngredient()
-	.clickServedWith2()
+	//.clickSize1()
+	//.clickIngredient()
+	//.clickServedWith2()
 	.clickAddToOrder()
 	.clickKeepLooking()
 	.clickPartyMenu()
 	.clickRiceAndNoodle()
-	.clickMangolian()
+	.clickPartyMangolian()
 	.enterQuantity(num1)
 	.clickIngredient()
 	.clickAddToOrder()
 	.clickCheckOut()
 	.enterLettuce(quantity)
 	.clickLettuceAddToOrder()
-  .clickCheckOut()
-  .clickCalendar(date)
+	.verifyMenuQuantity(num)           //Verify Menu Quantity
+	.verifyPartyMenuQuantity(num1)     //Verify PartyMenu Quantity
+	.verifyExtrasQuantity(quantity)    //Verify Extras Quantity	
+    .clickCheckOut()
+    .clickCalendar(date)
  // .clickNext()
  // .clickDate()
   .selectTime(time)
@@ -50,15 +54,15 @@ public void login(String emailadd,String pwd,String num,String num1,String quant
   .enterExpDate(exdate)
   .enterCvv(cvv)
   .clickPayWithCard()
-  .verifydate(month)
-  .verifytime(time)
+  .verifydate(month)              //Verify Month
+  .verifytime(time)               //Verify Time
   .InvokeGmail1()
   .enterEmailaddress(Emailaddr)
   .enterNext()
   .enterPassword(Password)
   .clickSignIn()
   .clickUnreadMail()
-  .verifyText1(txt)
+  .verifyText1(txt)              //Verify ConfirmationMail
 ;	}
 @BeforeClass
 public void beforeClass() {

@@ -17,7 +17,7 @@ public class AddCard extends PeiweiWrappers {
 	}
 	
 	public AddCard enterQty(String data )  {
-		enterById(prop.getProperty("Addcard.CardQty.id"), data);
+		enterById(prop.getProperty("Addcard.CardQty.Id"), data);
 		return this;
 			
 	}
@@ -62,4 +62,12 @@ public class AddCard extends PeiweiWrappers {
 		return new CardCheckout();
 			
 	}
+
+	public AddCard verifyQuantity(String data) {
+		verifyTextByXpath(prop.getProperty("Addcard.VerifyQuantity.Xpath"), data);
+		return this;
+	}
+
 }
+
+

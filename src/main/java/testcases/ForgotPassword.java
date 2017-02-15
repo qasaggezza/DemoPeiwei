@@ -33,6 +33,7 @@ package testcases;
     	.enterPassword1(pass1)
     	.enterPassword2(pass2)
     	.clickSubmit()
+    	.verifyMailId(emailadd)        //VerifyEmailId
     	.switchback()
     	.clickInbox()
     	.clickUnreadMail1()

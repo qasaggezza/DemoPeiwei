@@ -13,68 +13,68 @@ public class Register extends PeiweiWrappers{
 	}
 	
 	public Register enterEmailaddress(String data) {
-		enterByName(prop.getProperty("Register.Emailaddress.name"), data);
+		enterByName(prop.getProperty("Register.Emailaddress.Name"), data);
 		return this;
 	}
 
 	public Register enterPassword(String data) {
-		enterByName(prop.getProperty("Register.Password.name"), data);
+		enterByName(prop.getProperty("Register.Password.Name"), data);
 		return this;
 	}
 	
 	public Register enterFirstname(String data) {
-		enterByName(prop.getProperty("Register.Firstname.name"), data);
+		enterByName(prop.getProperty("Register.FirstName.Name"), data);
 		return this;
 	}
 	public Register enterLastname(String data) {
-		enterByName(prop.getProperty("Register.Lastname.name"), data);
+		enterByName(prop.getProperty("Register.LastName.Name"), data);
 		return this;
 	}
 	
 	public Register enterPhone(String data) {
-		enterByName(prop.getProperty("Register.Phone.name"), data);
+		enterByName(prop.getProperty("Register.Phone.Name"), data);
 		return this;
 	}
 	
 	
 	public Register enterZip(String data) {
-		enterByName(prop.getProperty("Register.Zip.name"), data);
+		enterByName(prop.getProperty("Register.Zip.Name"), data);
 		return this;
 	}
 	
 
 	public Register clickenableLoyal() {
-		clickByXpath(prop.getProperty("Register.signup.XPath"));
+		clickByXpath(prop.getProperty("Register.Signup.Xpath"));
 		return this;
 	}
 	
 	public Register clickCreateMyAccount() throws InterruptedException {
-		clickByXpath(prop.getProperty("Register.createaccount.XPath"));
+		clickByXpath(prop.getProperty("Register.Createaccount.Xpath"));
 		//Thread.sleep(5000);
 		return this;
 			}	
 	
 	public AccountOverview clickCreateMyAccount2() throws InterruptedException {
-		clickByXpath(prop.getProperty("Register.createaccount.XPath"));
+		clickByXpath(prop.getProperty("Register.Createaccount.Xpath"));
 		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		return new AccountOverview();
 			}
 	
 	public Register enterMonth(String data) throws InterruptedException {
-		selectByName(prop.getProperty("Register.selectmonth.name"), data);		
+		selectByName(prop.getProperty("Register.Selectmonth.Name"), data);		
 		return this;
 	}	
 	
 	public Register enterDate(String data) {
-		selectByName(prop.getProperty("Register.selectday.name"), data);
+		selectByName(prop.getProperty("Register.Selectday.Name"), data);
 		return this;
 	}
 	
 
 	public AccountOverview clickSubmit() throws InterruptedException {
-		//System.out.println(driver.findElementByXPath("(//button[@type='submit'])[2]").getText());
+		//System.out.println(driver.findElementByXpath("(//button[@type='submit'])[2]").getText());
 		//Thread.sleep(6000);
-		clickById(prop.getProperty("Register.submit.id"));
+		clickById(prop.getProperty("Register.Submit.Id"));
 		//Thread.sleep(5000);
 		return new AccountOverview();
 

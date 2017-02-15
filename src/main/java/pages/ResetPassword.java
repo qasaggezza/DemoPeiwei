@@ -20,7 +20,7 @@ public class ResetPassword extends PeiweiWrappers {
 	}
 	
 	public AccountOverview clickSubmit() throws InterruptedException {
-		clickByXpath(prop.getProperty("ResetPwd.submit.Xpath"));
+		clickByXpath(prop.getProperty("ResetPwd.Submit.Xpath"));
 		//Thread.sleep(5000);
 		return new AccountOverview();
 	}

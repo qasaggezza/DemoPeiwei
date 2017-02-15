@@ -27,6 +27,7 @@ public void login(String cval,String quantity,String to,String from,String msg,S
 	.enterMessage(msg)
 	.clickPreview()
 	.clickAddOrder()
+	.verifyQuantity(quantity)       //Verify No.ofcards
 	.clickCheckOut()
 	.enterFname(fname)
 	.enterLname(lname)
@@ -37,7 +38,9 @@ public void login(String cval,String quantity,String to,String from,String msg,S
 	.selectState(State)
 	.enterZipCode(Zip)
 	.selectShippingMethood(Shipmode)
-	.enterEmail(mail)
+	.enterEmail(mail)			
+	.verifyFrom(from)					//Verify Sender 
+	.verifyTo(to)						//Verify Receiver
 	.clickReview()
 	.clickPayNow()
 	.enterName(cname)
@@ -50,7 +53,7 @@ public void login(String cval,String quantity,String to,String from,String msg,S
     .enterPassword(Password)
     .clickSignIn()
     .clickUnreadMail()
-    .verifyText(txt)
+    .verifyText(txt)            //VerifyConfirmationMail
      ;
 	}
 @BeforeClass

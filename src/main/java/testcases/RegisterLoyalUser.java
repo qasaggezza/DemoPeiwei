@@ -29,6 +29,7 @@ public class RegisterLoyalUser extends PeiweiWrappers{
 		.enterMonth(mon)
 		.enterDate(day)
 		.clickSubmit()
+		.verifyMailId(emailaddress)  //VerifyEmailAddress
 		.clickLogout()
 		.clickNotUserName()
 		.InvokeGmail2()
@@ -37,7 +38,7 @@ public class RegisterLoyalUser extends PeiweiWrappers{
 	    .enterPassword(Password)
 	    .clickSignIn()
 	    .clickUnreadMail()
-	    .verifyText2(msg)
+	    .verifyText2(msg)           //VerifyWelcomeMail
 		;
 		}
 	@BeforeClass

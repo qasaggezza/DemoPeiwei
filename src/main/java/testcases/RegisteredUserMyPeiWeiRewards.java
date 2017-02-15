@@ -20,8 +20,9 @@ public void login(String emailadd,String pwd) throws InterruptedException {
 	.enterEmailaddresslogin(emailadd)
 	.enterPassword(pwd)
 	.clickSubmit()
+	.verifyMailId(emailadd)              //Verify EmailId
 	.clickMyWeiRewards()
-	.verifyCard()
+	.verifyCard()                        //Verify Card
 	.clickEarnAVisit()
 	.clickMyWeiRewards1()
 	.clickFAQ()

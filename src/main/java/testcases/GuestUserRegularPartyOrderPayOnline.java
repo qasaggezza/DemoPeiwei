@@ -22,22 +22,25 @@ public void login(String loc,String num,String num1,String quantity,String date,
 	.clickP2labs()
 	.clickMenuAndOrd()
 	.clickRiceAndNoodle()
-	.clickSesame()
+	.clickJapeneseSteak()
 	.enterQuantity(num)
-	.clickSize1()
-	.clickIngredient()
-	.clickServedWith2()
+	//.clickSize1()
+	//.clickIngredient()
+	//.clickServedWith2()
 	.clickAddToOrder()
 	.clickKeepLooking()
 	.clickPartyMenu()
 	.clickRiceAndNoodle()
-	.clickMangolian()
+	.clickPartyMangolian()
 	.enterQuantity(num1)
 	.clickIngredient()
 	.clickAddToOrder()
 	.clickCheckOut()
 	.enterLettuce(quantity)
 	.clickLettuceAddToOrder()
+	.verifyMenuQuantity(num)           //Verify Menu Quantity
+	.verifyPartyMenuQuantity(num1)     //Verify PartyMenu Quantity
+	.verifyExtrasQuantity(quantity)    //Verify Extras Quantity	
     .clickCheckOut()
     .clickCalendar(date)
    // .clickNext()
@@ -59,15 +62,15 @@ public void login(String loc,String num,String num1,String quantity,String date,
     .selectState(state)
     .enterZipCode(Zip1)*/
     .clickPayWithCard()
-    .verifydate(month)
-    .verifytime(time)
+    .verifydate(month)              //Verify Month
+    .verifytime(time)               //Verify Time
     .InvokeGmail1()
     .enterEmailaddress(Emailaddr)
     .enterNext()
     .enterPassword(Password)
     .clickSignIn()
     .clickUnreadMail()
-    .verifyText1(txt)
+    .verifyText1(txt)              //Verify ConfirmationMail
      ;
 	}
 @BeforeClass

@@ -66,7 +66,7 @@ public class Inbox extends PeiweiWrappers{
 	
 	
 	public Inbox clickRefresh() {
-		clickByXpath(prop.getProperty("Gmail.refresh.Xpath"));
+		clickByXpath(prop.getProperty("Gmail.Refresh.Xpath"));
 		return this;
 	}
 	

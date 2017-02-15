@@ -19,6 +19,7 @@ public void login(String emailadd,String pwd,String date,String time,String dat,
 	.enterEmailaddresslogin(emailadd)
 	.enterPassword(pwd)
 	.clickSubmit()
+	.verifyMailId(emailadd)              //Verify EmailId
 	.clickOrderFavourite()
 	.clickCheckOutFavourite()
 	//.clickQuinoaAddToFavorite()
@@ -26,16 +27,16 @@ public void login(String emailadd,String pwd,String date,String time,String dat,
 	.clickCalendar(date)
 	.selectTime(time)
 	.clickPlaceOrder()
-	.verifydate(dat)
+	.verifydate(dat)                    //Verify Date
 	//.verifyMonth(mon)
-	.verifytime(time)
+	.verifytime(time)                   //Verify Time
 	.InvokeGmail1()
     .enterEmailaddress(Emailaddr)
     .enterNext()
     .enterPassword(Password)
     .clickSignIn()
     .clickUnreadMail()  
-    .verifyText1(verifytext)
+    .verifyText1(verifytext)             //VerifyConfirmationMail
 	;	
 	}
 	

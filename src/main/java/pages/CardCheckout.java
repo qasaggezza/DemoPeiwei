@@ -9,12 +9,12 @@ public class CardCheckout extends PeiweiWrappers {
 			//Reporter.reportStep("This is not Home Page", "FAIL");
 	}
 	public CardCheckout enterFname(String data) {
-		enterByName(prop.getProperty("CardCheckout.Fname.name"), data);
+		enterByName(prop.getProperty("CardCheckout.FName.Name"), data);
 		return this;	
 		
 	}
 	public CardCheckout enterLname(String data) {
-		enterByName(prop.getProperty("CardCheckout.Lname.name"), data);
+		enterByName(prop.getProperty("CardCheckout.LName.Name"), data);
 		return this;	
 		
 	}
@@ -26,42 +26,42 @@ public class CardCheckout extends PeiweiWrappers {
 	}
 	
 	public CardCheckout enterAddr1(String data) {
-		enterByName(prop.getProperty("CardCheckout.Addr1.name"), data);
+		enterByName(prop.getProperty("CardCheckout.Addr1.Name"), data);
 		return this;	
 		
 	}
 	
 	public CardCheckout enterAddr2(String data) {
-		enterByName(prop.getProperty("CardCheckout.Addr2.name"), data);
+		enterByName(prop.getProperty("CardCheckout.Addr2.Name"), data);
 		return this;	
 		
 	}
 	
 	public CardCheckout enterCity(String data) {
-		enterByName(prop.getProperty("CardCheckout.City.name"), data);
+		enterByName(prop.getProperty("CardCheckout.City.Name"), data);
 		return this;	
 		
 	}
 	public CardCheckout selectState(String data) {
-		selectByName(prop.getProperty("CardCheckout.State.name"), data);
+		selectByName(prop.getProperty("CardCheckout.State.Name"), data);
 		return this;	
 		
 	}
 	public CardCheckout enterZipCode(String data) {
-		enterByName(prop.getProperty("CardCheckout.Zip.name"), data);
+		enterByName(prop.getProperty("CardCheckout.Zip.Name"), data);
 		return this;	
 		
 	}
 	
 	public CardCheckout selectShippingMethood(String data) {
-		selectByName(prop.getProperty("CardCheckout.ShippingMethod.name"), data);
+		selectByName(prop.getProperty("CardCheckout.ShippingMethod.Name"), data);
 		return this;	
 		
 	}
 	
 	
 	public CardCheckout enterEmail(String data) {
-		enterByName(prop.getProperty("CardCheckout.Email.name"), data);
+		enterByName(prop.getProperty("CardCheckout.Email.Name"), data);
 		return this;	
 		
 	}
@@ -77,5 +77,13 @@ public class CardCheckout extends PeiweiWrappers {
 		return new PaymentGateway();	
 		
 	}
+	public CardCheckout verifyFrom(String data) {
+		verifyTextByXpath(prop.getProperty("CardCheckout.VerifyFrom.Xpath"), data);
+		return this;
+	}
 	
+	public CardCheckout verifyTo(String data) {
+		verifyTextByXpath(prop.getProperty("CardCheckout.VerifyTo.Xpath"), data);
+		return this;
+	}
 }

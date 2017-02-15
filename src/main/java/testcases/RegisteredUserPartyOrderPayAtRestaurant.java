@@ -20,31 +20,34 @@ public void login(String emailadd,String pwd,String num,String quantity,String d
 	.enterEmailaddresslogin(emailadd)
 	.enterPassword(pwd)
 	.clickSubmit()
+	.verifyMailId(emailadd)              //Verify EmailId
 	.clickMenuAndOrder()
 	.clickPartyMenu()
 	.clickRiceAndNoodle()
-	.clickMangolian()
+	.clickPartyMangolian()
 	.enterQuantity(num)
 	.clickIngredient()
 	.clickAddToOrder()
 	.clickCheckOut()
 	.enterLettuce(quantity)
 	.clickLettuceAddToOrder()
+	.verifyMenuQuantity(num)           //Verify Menu Quantity
+	.verifyExtrasQuantity(quantity)    //Verify Extras Quantity
     .clickCheckOut()
     .clickCalendar(date)
    // .clickNext()
    // .clickDate()
     .selectTime(time)
     .clickPlaceOrder()
-    .verifydate(month)
-    .verifytime(time)
+    .verifydate(month)            //VerifyMonth
+    .verifytime(time)             //VerifyTime
     .InvokeGmail1()
     .enterEmailaddress(Emailaddr)
     .enterNext()
     .enterPassword(Password)
     .clickSignIn()
     .clickUnreadMail()
-    .verifyText1(txt)
+    .verifyText1(txt)             //VerifyConfirmationMail
      ;	}
 @BeforeClass
 public void beforeClass() {

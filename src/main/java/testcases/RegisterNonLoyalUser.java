@@ -28,6 +28,7 @@ public class RegisterNonLoyalUser extends PeiweiWrappers{
 		.enterZip(zipcode)
 		.clickenableLoyal()
 		.clickCreateMyAccount2()
+		.verifyMailId(emailaddress)    //VerifyEmailAddress
 		.clickLogout()
 		.clickNotUserName()
 		.InvokeGmail2()
@@ -36,7 +37,7 @@ public class RegisterNonLoyalUser extends PeiweiWrappers{
 	    .enterPassword(Password)
 	    .clickSignIn()
 	    .clickUnreadMail()
-	    .verifyText2(msg)
+	    .verifyText2(msg)              //VerifyWelcomeMail
 		;
 	}
 	@BeforeClass
@@ -44,7 +45,7 @@ public class RegisterNonLoyalUser extends PeiweiWrappers{
 		dataSheetName="RegisterNonLoyalUser";
 		browserName="chrome";
 		testCaseName="RegisterNonLoyalUser";
-		testDescription="Check whether a user is able to successfully register as a loyal customer";
+		testDescription="Check whether a user is able to successfully register as a Non-loyal customer";
 	}
 
 }

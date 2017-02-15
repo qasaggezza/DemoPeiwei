@@ -13,7 +13,7 @@ public class AccountOverview extends PeiweiWrappers {
 	
 	public AccountOverview clickLogout() throws InterruptedException {
 	//	Thread.sleep(5000);
-		clickByLink(prop.getProperty("AccountOverview.LogOut.linktext"));
+		clickByLink(prop.getProperty("AccountOverview.LogOut.Linktext"));
 		return this;
 		
 		
@@ -21,13 +21,13 @@ public class AccountOverview extends PeiweiWrappers {
 
 	public HomePage clickNotUserName() throws InterruptedException {
 	//	Thread.sleep(5000);
-		clickByXpath(prop.getProperty("AccountOverview.NotUserName.XPath"));
+		clickByXpath(prop.getProperty("AccountOverview.NotUserName.Xpath"));
 		return new HomePage();
 		
 		}
 
 	public MenuAndOrder clickMenuAndOrder() {
-		clickByXpath(prop.getProperty("AccountOverview.MenuAndOrder.XPath"));
+		clickByXpath(prop.getProperty("AccountOverview.MenuAndOrder.Xpath"));
 		return new MenuAndOrder();
 		
 		}
@@ -51,12 +51,20 @@ public class AccountOverview extends PeiweiWrappers {
 	}
 
 	public AccountOverview clickOrderFavourite() {
-		clickByXpath(prop.getProperty("AccountOverview.orderFavorite.XPath"));
+		clickByXpath(prop.getProperty("AccountOverview.OrderFavorite.Xpath"));
 		return this;		
 		}
 	
 	public Extras clickCheckOutFavourite() {
-		clickByXpath(prop.getProperty("AccountOverview.orderFavoriteCheckOut.XPath"));
+		clickByXpath(prop.getProperty("AccountOverview.OrderFavoriteCheckOut.Xpath"));
 		return new Extras();		
 		}
+
+	public AccountOverview verifyMailId(String data) {
+		verifyTextByXpath(prop.getProperty("AccountOverview.MailId.Xpath"), data);
+		return this;
+	}
+
 }
+
+

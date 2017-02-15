@@ -29,7 +29,7 @@ public class OrderConfirmation extends PeiweiWrappers {
 }
 	
     public OrderConfirmation getTotal() {
-		getTextByXpath(prop.getProperty("OrderConfirmation.Total.XPath"));
+		getTextByXpath(prop.getProperty("OrderConfirmation.Total.Xpath"));
 		return this;	
 		
 	}

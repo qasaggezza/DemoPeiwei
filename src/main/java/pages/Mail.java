@@ -14,17 +14,17 @@ public class Mail extends PeiweiWrappers{
 	}
 	
 	public Mail verifyText(String data) {
-		verifyTextContainsByXpath(prop.getProperty("Gmail.msg4.Xpath"), data);
+		verifyTextContainsByXpath(prop.getProperty("Gmail.Msg4.Xpath"), data);
 		return this;
 	}
 	
 	public Mail verifyText1(String data) {
-		verifyTextContainsByXpath(prop.getProperty("Gmail.msg2.Xpath"), data);
+		verifyTextContainsByXpath(prop.getProperty("Gmail.Msg2.Xpath"), data);
 		return this;
 	}
 	
 	public Mail verifyText2(String data) {
-		verifyTextContainsByXpath(prop.getProperty("Gmail.msg1.Xpath"), data);
+		verifyTextContainsByXpath(prop.getProperty("Gmail.Msg1.Xpath"), data);
 		return this;
 	}
 }

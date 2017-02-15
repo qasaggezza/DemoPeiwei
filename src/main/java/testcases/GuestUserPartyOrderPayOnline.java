@@ -23,13 +23,15 @@ public void login(String loc,String num,String quantity,String date,String time,
 	.clickMenuAndOrd()
 	.clickPartyMenu()
 	.clickRiceAndNoodle()
-	.clickMangolian()
+	.clickPartyMangolian()
 	.enterQuantity(num)
 	.clickIngredient()
 	.clickAddToOrder()
 	.clickCheckOut()
 	.enterLettuce(quantity)
 	.clickLettuceAddToOrder()
+	.verifyMenuQuantity(num)       //Verify Menu Quantity
+	.verifyExtrasQuantity(quantity)     //Verify Extras Quantity
     .clickCheckOut()
     .clickCalendar(date)
     //.clickNext()
@@ -51,15 +53,15 @@ public void login(String loc,String num,String quantity,String date,String time,
     .selectState(state)
     .enterZipCode(Zip1)*/
     .clickPayWithCard()
-    .verifydate(month)
-    .verifytime(time) 
+    .verifydate(month)             //VerifyDate
+    .verifytime(time)              //VerifyTime
     .InvokeGmail1()
     .enterEmailaddress(Emailaddr)
     .enterNext()
     .enterPassword(Password)
     .clickSignIn()
     .clickUnreadMail()
-    .verifyText1(txt)
+    .verifyText1(txt)               //VerifyConfirmationMail
      ;
 	}
 @BeforeClass

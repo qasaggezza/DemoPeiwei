@@ -21,6 +21,7 @@ public void login(String emailadd,String pwd,String cval,String quantity,String 
 	.enterEmailaddresslogin(emailadd)
 	.enterPassword(pwd)
 	.clickSubmit()
+	.verifyMailId(emailadd)              //Verify EmailId
     .clickGiftcard()
     .clickOrdercard()
     .selectCardValue(cval)
@@ -30,6 +31,7 @@ public void login(String emailadd,String pwd,String cval,String quantity,String 
 	.enterMessage(msg)
 	.clickPreview()
 	.clickAddOrder()
+	.verifyQuantity(quantity)       //Verify No.ofcards
 	.clickCheckOut()
 	.enterFname(fname)
 	.enterLname(lname)
@@ -41,6 +43,7 @@ public void login(String emailadd,String pwd,String cval,String quantity,String 
 	.enterZipCode(Zip)
 	.selectShippingMethood(Shipmode)
 	.enterEmail(mail)
+	.verifyTo(to)				//Verify Receiver
 	.clickReview()
 	.clickPayNow()
 	.enterName(cname)
@@ -53,7 +56,7 @@ public void login(String emailadd,String pwd,String cval,String quantity,String 
     .enterPassword(Password)
     .clickSignIn()
     .clickUnreadMail()
-    .verifyText(txt)
+    .verifyText(txt)           //VerifyConfirmationMail
      ;
 	}
 @BeforeClass

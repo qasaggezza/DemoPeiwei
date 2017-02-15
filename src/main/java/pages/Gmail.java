@@ -13,23 +13,23 @@ public class Gmail extends PeiweiWrappers{
 	}
 	
 	public Gmail enterEmailaddress(String data) {
-		enterById(prop.getProperty("Gmail.Emailaddress.id"), data);
+		enterById(prop.getProperty("Gmail.Emailaddress.Id"), data);
 		return this;
 	}
 	
 	public Gmail enterNext() throws InterruptedException {
-		clickById(prop.getProperty("Gmail.Next.id"));
-		//Thread.sleep(3000);
+		clickById(prop.getProperty("Gmail.Next.Id"));
+		Thread.sleep(1000);
 		return this;
 	}
 
 	public Gmail enterPassword(String data) {
-		enterById(prop.getProperty("Gmail.Password.id"), data);
+		enterById(prop.getProperty("Gmail.Password.Id"), data);
 		return this;
 	}
 	
 	public Inbox clickSignIn() {
-		clickById(prop.getProperty("Gmail.Signin.id"));
+		clickById(prop.getProperty("Gmail.Signin.Id"));
 		return new Inbox();
 	}
 	

@@ -21,18 +21,21 @@ public void login(String emailadd,String pwd,String num,String rice,String qua,S
 	.enterEmailaddresslogin(emailadd)
 	.enterPassword(pwd)
 	.clickSubmit()
+	.verifyMailId(emailadd)              //Verify EmailId
 	.clickMenuAndOrder()
 	.clickRiceAndNoodle()
-	.clickSesame()
+	.clickJapeneseSteak()
 	.enterQuantity(num)
-	.clickSize1()
-	.clickIngredient()
-	.clickServedWith1()
+	//.clickSize1()
+	//.clickIngredient()
+	//.clickServedWith1()
 	.clickAddToOrder()
 	.clickCheckOut()
 	.selectRice(rice)
 	.enterQuan(qua)
     .clickRiceAddToOrder()
+    .verifyMenuQuantity(num)     //Verify Menu Quantity
+    .verifyExtrasQuantity(qua)   //Verify Extras Quantity
     .clickCheckOut()
     .clickCalendar(date)
    // .clickNext()
@@ -45,15 +48,15 @@ public void login(String emailadd,String pwd,String num,String rice,String qua,S
     .enterExpDate(exdate)
     .enterCvv(cvv)
     .clickPayWithCard()
-    .verifydate(dat)
-    .verifytime(time)
+    .verifydate(dat)            //Verify Month
+    .verifytime(time)           //Verify Time
     .InvokeGmail1()
     .enterEmailaddress(Emailaddr)
     .enterNext()
     .enterPassword(Password)
     .clickSignIn()
     .clickUnreadMail()
-    .verifyText1(txt)
+    .verifyText1(txt)          // verify Confirmation Mail
      ;
 	}
 @BeforeClass

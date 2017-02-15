@@ -22,16 +22,18 @@ public void login(String loc,String num,String rice,String quantity,String date,
 	.clickP2labs()
 	.clickMenuAndOrd()
 	.clickRiceAndNoodle()
-	.clickSesame()
+	.clickJapeneseSteak()
 	.enterQuantity(num)
-	.clickSize1()
-	.clickIngredient()
-	.clickServedWith1()
+	//.clickSize1()
+	//.clickIngredient()
+	//.clickServedWith1()
 	.clickAddToOrder()
 	.clickCheckOut()
 	.selectRice(rice)
 	.enterQuan(quantity)
 	.clickRiceAddToOrder()
+    .verifyMenuQuantity(num)          //Verify Menu Quantity
+    .verifyExtrasQuantity(quantity)   //Verify Extras Quantity
     .clickCheckOut()
     .clickCalendar(date)
     //.clickNext()
@@ -43,15 +45,15 @@ public void login(String loc,String num,String rice,String quantity,String date,
     .enterPhone(Phone)
     .enterZipCode(Zip)
     .clickPlaceOrder()
-    .verifydate(month)
-    .verifytime(time)
+    .verifydate(month)              //VerifyMonth
+    .verifytime(time)               //VerifyTime
     .InvokeGmail1()
     .enterEmailaddress(Emailaddr)
     .enterNext()
     .enterPassword(Password)
     .clickSignIn()
     .clickUnreadMail()
-    .verifyText1(txt)
+    .verifyText1(txt)              //VerifyMail
      ;
 	}
 @BeforeClass
