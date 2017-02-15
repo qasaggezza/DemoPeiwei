@@ -3,18 +3,18 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testcases.RegUserPartyOrderPayAtRestaurant">
+      <class name="testcases.RegisterNonLoyalUser">
         <methods>
+          <include name="beforeClass"/>
           <include name="beforeSuite"/>
           <include name="afterTest"/>
           <include name="afterSuite"/>
           <include name="beforeTest"/>
-          <include name="beforeClass"/>
           <include name="afterMethod"/>
           <include name="login" invocation-numbers="0"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- testcases.RegUserPartyOrderPayAtRestaurant -->
+      </class> <!-- testcases.RegisterNonLoyalUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

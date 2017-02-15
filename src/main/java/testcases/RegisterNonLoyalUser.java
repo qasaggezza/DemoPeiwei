@@ -5,8 +5,8 @@ import org.testng.annotations.Test;
 
 
 import pages.HomePage;
-import pages.Register;
-import pages.AccountOverview;
+//import pages.Register;
+//import pages.AccountOverview;
 import wrappers.PeiweiWrappers;
 
 import org.testng.annotations.BeforeClass;
