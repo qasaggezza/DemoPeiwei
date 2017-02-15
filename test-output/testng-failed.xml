@@ -3,8 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="testcases.RegisteredUserRegularOrderPayAtRestaurant">
+=======
+      <class name="testcases.RegisterNonLoyalUser">
+>>>>>>> 9b8fc7f6cd9df22d32e0ba56cda9671a2f70d3c8
         <methods>
+          <include name="beforeClass"/>
           <include name="beforeSuite"/>
           <include name="beforeClass"/>
           <include name="afterTest"/>
@@ -14,7 +19,11 @@
           <include name="login" invocation-numbers="0"/>
           <include name="beforeMethod"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- testcases.RegisteredUserRegularOrderPayAtRestaurant -->
+=======
+      </class> <!-- testcases.RegisterNonLoyalUser -->
+>>>>>>> 9b8fc7f6cd9df22d32e0ba56cda9671a2f70d3c8
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
